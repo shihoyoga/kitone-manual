@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>食と暮らしのマニュアル｜ヨハクをつくる7日間</title>
+<link rel="icon" href="assets/favicon.ico">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>食と暮らしのマニュアル｜ヨハクをつくる7日間</title>
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Maru+Gothic:wght@400;500;700&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Kanata';src:url('assets/fonts/kanata.woff2') format('woff2');font-display:swap}
+body{margin:0;background:#FAF5EC;color:#574B47;-webkit-font-smoothing:antialiased}
+a{color:#2F4A3A}a:hover{color:#55745D}
+button{font-family:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid #C9A86A;outline-offset:2px}
+@keyframes g-pop{0%{transform:scale(.6) rotate(-12deg);opacity:0}60%{transform:scale(1.15) rotate(6deg);opacity:1}100%{transform:none;opacity:1}}
+@keyframes g-in{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:none}}
+@keyframes g-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+
+@keyframes g-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes g-shine{0%{background-position:-120% 0}100%{background-position:220% 0}}
+main>section,main>button,main>div{animation:g-in .5s cubic-bezier(.2,.7,.3,1) both}
+main>*:nth-child(2){animation-delay:.06s}main>*:nth-child(3){animation-delay:.12s}main>*:nth-child(4){animation-delay:.18s}main>*:nth-child(5){animation-delay:.24s}main>*:nth-child(n+6){animation-delay:.3s}
+main button,main a{transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s}
+main button:hover,main a:hover{transform:translateY(-3px)}
+main button:active,main a:active{transform:scale(.97)}
+[data-anim~="emoji"]{animation:g-float 3.4s ease-in-out infinite}
+[data-anim~="leaf"]{animation:g-float 3s ease-in-out infinite}
+main summary{transition:color .2s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;font-family:'Zen Maru Gothic',sans-serif;font-size:14px;line-height:1.85;color:#4A3F3B;background:linear-gradient(rgba(250,245,236,.35),rgba(250,245,236,.35)),url('assets/bg-linen.jpg') center top/cover fixed #FAF5EC">
+  <header style="position:sticky;top:0;z-index:20;background:#E3E8DE">
+    <div style="max-width:640px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:10px;min-height:48px">
+      <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ goHome }}" style="flex:none;display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 14px 0 8px;border:none;border-radius:999px;background:#E3E8DE;color:#2F4A3A;font-size:13px;font-weight:700;cursor:pointer">← 一覧へ</button>
+      </sc-if>
+      <img src="assets/kitone-logo.png" alt="KitoNe" style="height:34px;width:auto;display:block">
+      <span style="flex:1;font-family:'Kanata','Kiwi Maru',serif;font-size:14px;line-height:1.3;color:#2F4A3A">ヨハクをつくる7日間<br><span style="font-size:11px;color:#2F4A3A">食と暮らしのマニュアル <span style="font-family:'Zen Maru Gothic',sans-serif;font-size:10.5px;color:#5A4E49">by うさしほ🐰</span></span></span>
+      <span style="flex:none;display:inline-flex;align-items:baseline;gap:3px;padding:4px 12px;border-radius:999px;background:#2F4A3A;color:#F3EADC"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:16px">{{ readCount }}</span><span style="font-size:11px">/ {{ total }} 既読</span></span>
+    </div>
+      </header>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main style="max-width:640px;margin:0 auto;padding:18px 16px 64px;display:flex;flex-direction:column;gap:18px">
+
+    <section style="display:flex;flex-direction:column;gap:6px;padding:8px 4px 0;animation:g-in .5s ease both">
+      <span style="display:flex;align-items:center;gap:8px;font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.3em;color:#2F4A3A"><span data-anim="leaf" style="width:10px;height:10px;border-radius:0 80% 0 80%;background:#B7C2AE"></span>YURUFAS GUIDE BOOK</span>
+      <h1 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,7vw,34px);line-height:1.4;color:#2F4A3A">ゆるっと整える、<br><span style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 4px">食と暮らしのマニュアル</span></h1>
+      <p style="margin:0;font-size:13px">{{ greet }}</p>
+    </section>
+
+    <section style="background:#E3E8DE;color:#574B47;border-radius:28px;padding:22px 20px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;animation:g-in .5s ease both">
+      <div style="position:relative;width:108px;height:108px">
+        <svg viewBox="0 0 100 100" width="108" height="108" style="display:block;transform:rotate(-90deg)"><circle cx="50" cy="50" r="44" fill="none" stroke="#FBFCF9" stroke-width="8"></circle><circle cx="50" cy="50" r="44" fill="none" stroke="#E8C4C0" stroke-width="8" stroke-linecap="round" stroke-dasharray="276.5" style="transition:stroke-dashoffset .8s ease;stroke-dashoffset:{{ ringOffset }}"></circle></svg>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:30px">{{ pctNum }}</span><span style="font-family:'Raleway',sans-serif;font-size:10px;letter-spacing:.2em">%</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.3em">MY PROGRESS</span>
+        <p style="margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;line-height:1.4;color:#2F4A3A"><span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:19px;letter-spacing:.04em;white-space:nowrap;line-height:1.5">{{ levelName }}</span><span style="font-size:11.5px;font-weight:700">読むほど育つ</span></p><p style="margin:0;font-size:11.5px;font-weight:700;color:#2F4A3A">{{ nextTxt }}</p>
+        <p style="margin:0;font-size:12px;line-height:1.7">{{ levelMsg }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:2px">
+          <span style="flex:none;white-space:nowrap;padding:1px 10px;border-radius:999px;border:1px solid #2F4A3A;font-size:11px;font-weight:700;color:#2F4A3A">既読 {{ readCount }}</span>
+          <span style="flex:none;white-space:nowrap;padding:1px 10px;border-radius:999px;border:1px solid #2F4A3A;font-size:11px;font-weight:700;color:#2F4A3A">やってみた {{ triedCount }}</span>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <button onClick="{{ openYF }}" style="text-align:left;border:none;cursor:pointer;background:transparent;padding:0;display:flex;align-items:stretch;filter:drop-shadow(0 6px 14px rgba(85,116,93,.22));animation:g-in .5s ease both">
+      <span style="flex:none;width:18px;border-radius:14px 0 0 14px;background:#7E8F77;display:flex;flex-direction:column;justify-content:space-between;padding:18px 0"><span style="height:2px;margin:0 4px;background:#C9A86A"></span><span style="height:2px;margin:0 4px;background:#C9A86A"></span></span>
+      <span style="flex:1;min-width:0;background:#D3DDCB;color:#574B47;padding:10px;display:flex">
+        <span style="flex:1;border:1px solid #C9A86A;border-radius:4px;padding:18px 16px;background:#FBFCF9;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px">
+          <span style="display:flex;align-items:center;gap:8px"><span style="padding:1px 10px;border-radius:999px;font-size:10.5px;font-weight:700;color:#574B47;background:{{ yfBadgeBg }}">{{ yfBadge }}</span><span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:9px;letter-spacing:.3em;color:#2F4A3A">MAIN GUIDE ・ VOL.01</span></span>
+          <span style="width:28px;height:1px;background:#C9A86A"></span>
+          <span style="font-size:26px;line-height:1">🔰</span>
+          <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:21px;line-height:1.45;color:#2F4A3A">食生活を<br>ゆるっと整える基本</span>
+          <span style="font-size:11.5px;line-height:1.7;color:#5A4E49">置き換え方・ドリンクの飲み方・<br>基本の3ステップ・過ごし方</span>
+          <span style="width:28px;height:1px;background:#C9A86A"></span>
+          <span style="flex:none;white-space:nowrap;padding:6px 18px;border-radius:999px;background:#2F4A3A;color:#FBFCF9;font-size:12.5px;font-weight:700">まずはこれを読もう 📖</span>
+        </span>
+      </span>
+      <span style="flex:none;width:10px;border-radius:0 10px 10px 0;margin:6px 0;background:repeating-linear-gradient(90deg,#FBFCF9 0 2px,#E6DCCB 2px 3px)"></span>
+    </button>
+
+    <div style="position:relative;margin-top:8px;border-radius:20px;padding:26px 14px 14px 30px;display:flex;flex-direction:column;gap:12px;background:repeating-linear-gradient(#FBFCF9 0 27px,#EEF2EA 27px 28px);box-shadow:0 0 0 1px #D3DDCB inset,0 6px 16px rgba(85,116,93,.12)">
+      <span style="position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(-3deg);width:96px;height:20px;background:rgba(232,196,192,.85);border-radius:3px"></span>
+      <span style="position:absolute;top:0;bottom:0;left:18px;width:1px;background:#E8C4C0"></span>
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px">
+        <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:21px;line-height:1.4;color:#2F4A3A"><span style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 40%;padding:0 4px">ᝰ✍🏻 書きこむページ</span></span>
+        <span style="font-size:12px;font-weight:700;color:#2F4A3A">タップして入力しよう</span>
+      </div>
+      <div style="position:relative;align-self:flex-start;padding:8px 14px;border-radius:16px;background:#2F4A3A;color:#F3EADC;font-size:11px;font-weight:700;line-height:1.6;box-shadow:0 4px 10px rgba(47,74,58,.18)">書いたら、スクショしてオープンチャットでシェアしよう🐰💭<span style="position:absolute;left:22px;bottom:-7px;width:14px;height:14px;background:#2F4A3A;transform:rotate(45deg);border-radius:2px"></span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+        <button onClick="{{ openPlan }}" style="border:none;cursor:pointer;border-radius:22px;padding:14px 6px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;background:#FBFCF9;box-shadow:0 0 0 1px #D3DDCB inset;color:#574B47" style-active="transform:scale(.96)"><span style="width:54px;height:54px;border-radius:18px;background:#F8ECEA;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 4px 10px rgba(85,116,93,.15)">✏️</span><span style="font-family:'Raleway',sans-serif;font-size:8.5px;letter-spacing:.2em;color:#2F4A3A">PLAN</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:13px;line-height:1.4;color:#2F4A3A">7日間<br>プラン</span><span style="font-size:10.5px;line-height:1.4;font-weight:700;color:#2F4A3A">まずは書こう</span></button>
+        <button onClick="{{ bc.open }}" style="border:none;cursor:pointer;border-radius:22px;padding:14px 6px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;background:#FBFCF9;box-shadow:0 0 0 1px #D3DDCB inset;color:#574B47" style-active="transform:scale(.96)"><span style="width:54px;height:54px;border-radius:18px;background:#E3E8DE;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 4px 10px rgba(85,116,93,.15)">📋</span><span style="font-family:'Raleway',sans-serif;font-size:8.5px;letter-spacing:.2em;color:#2F4A3A">BODY CHECK</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:13px;line-height:1.4;color:#2F4A3A">カラダ<br>チェック</span><span style="font-size:10.5px;line-height:1.4;font-weight:700;color:#2F4A3A">{{ bc.badge }}</span></button>
+        <button onClick="{{ rp.open }}" style="border:none;cursor:pointer;border-radius:22px;padding:14px 6px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;background:#FBFCF9;box-shadow:0 0 0 1px #D3DDCB inset;color:#574B47" style-active="transform:scale(.96)"><span style="width:54px;height:54px;border-radius:18px;background:#F6EFDF;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 4px 10px rgba(85,116,93,.15)">🌙</span><span style="font-family:'Raleway',sans-serif;font-size:8.5px;letter-spacing:.2em;color:#2F4A3A">REPORT</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:13px;line-height:1.4;color:#2F4A3A">毎日の<br>ふりかえり</span><span style="font-size:10.5px;line-height:1.4;font-weight:700;color:#2F4A3A">夜にシェア</span></button>
+      </div>
+    </div>
+    <button onClick="{{ openIntro }}" style="text-align:left;border:none;cursor:pointer;background:#FBFCF9;border-radius:24px;padding:10px 14px;display:flex;gap:10px;align-items:center;color:#574B47;box-shadow:0 0 0 1px #C9A86A inset">
+      <span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F3EADC;display:flex;align-items:center;justify-content:center;font-size:18px;animation:g-sway 3s ease-in-out infinite">🐰</span>
+      <span style="display:flex;flex-direction:column;gap:2px;min-width:0;flex:1">
+        <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:14.5px;line-height:1.4">はじめに｜このガイドとの付き合い方</span>
+        
+      </span>
+      <span style="flex:none;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;background:{{ introBadgeBg }};color:{{ introBadgeFg }}">{{ introBadge }}</span>
+    </button>
+
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:6px 4px 0">
+      <h2 style="margin:0;display:flex;align-items:baseline;gap:8px;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:20px;color:#2F4A3A">CHAPTERS<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:13px;color:#C9A86A">{{ readCount }}/{{ total }}</span></h2>
+      <span style="font-size:12px;color:#5A4E49">気になるところから読んでOK</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="11">
+        <button onClick="{{ c.open }}" style="position:relative;text-align:left;border:none;cursor:pointer;border-radius:22px;padding:14px 14px 12px;display:flex;flex-direction:column;gap:6px;min-height:150px;color:{{ c.fg }};background:{{ c.bg }};box-shadow:{{ c.ring }};animation:g-in .45s ease both;animation-delay:{{ c.delay }}">
+          <span style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+            <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:22px;line-height:1;color:#C9A86A">{{ c.no }}</span>
+            <span data-anim="emoji" style="width:40px;height:40px;border-radius:50%;background:{{ c.icBg }};display:flex;align-items:center;justify-content:center;font-size:20px">{{ c.icon }}</span>
+          </span>
+          <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:9px;letter-spacing:.2em;color:{{ c.enC }}">{{ c.en }}</span>
+          <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:15px;line-height:1.45">{{ c.title }}</span>
+          <span style="margin-top:auto;display:flex;flex-wrap:wrap;gap:4px">
+            <span style="padding:0 8px;border-radius:999px;font-size:10.5px;font-weight:700;background:{{ c.badgeBg }};color:{{ c.badgeFg }}">{{ c.badge }}</span>
+            <sc-if value="{{ c.hasScore }}"><span style="padding:0 8px;border-radius:999px;font-size:10.5px;font-weight:700;background:#E8C4C0;color:#574B47">{{ c.score }}</span></sc-if>
+            <sc-if value="{{ c.hasFit }}"><span style="padding:0 8px;border-radius:999px;font-size:10.5px;font-weight:700;background:#F3EADC;color:#574B47">{{ c.fitLabel }}</span></sc-if>
+          </span>
+          <sc-if value="{{ c.read }}"><span style="position:absolute;top:-6px;left:-4px;width:30px;height:30px;border-radius:50%;background:#E8C4C0;color:#574B47;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;animation:g-pop .5s cubic-bezier(.3,1.4,.5,1) both">✓</span></sc-if>
+        </button>
+      </sc-for>
+    </div>
+
+    <section style="background:#FBFCF9;border-radius:22px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 0 0 1px #D3DDCB inset">
+      <span data-anim="emoji" style="flex:none;width:40px;height:40px;border-radius:50%;background:#E3E8DE;display:flex;align-items:center;justify-content:center;font-size:20px">💬</span>
+      <span style="display:flex;flex-direction:column;gap:2px;font-size:12.5px;line-height:1.75"><strong style="font-weight:700;font-size:13.5px;color:#2F4A3A">わからないことは、お気軽に質問してね</strong>期間中は、専用LINEのノートにある「質問ノート」のコメントへ。読んでいて気になったことや、わかりにくかったことなど、なんでもどうぞ🐰</span>
+    </section>
+    <section style="background:#E3E8DE;border-radius:24px;padding:16px 18px;font-size:12px;line-height:1.8">
+      <p style="margin:0">このガイドは、うさしほのこれまでの学びや経験をもとに、<strong style="font-weight:700">オリジナルでまとめた一般的な内容</strong>です。病気の治療中の方・服薬中の方・妊娠中の方は、必ず主治医にご相談ください。</p>
+    </section>
+    <sc-if value="{{ showReset }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ reset }}" style="align-self:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#5A4E49;font-size:12px;cursor:pointer">記録をリセット</button>
+    </sc-if>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ inChapter }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:640px;margin:0 auto;padding:18px 16px 64px;display:flex;flex-direction:column;gap:14px">
+    <section style="background:#F6EFDF;color:#574B47;border-radius:28px;padding:24px 20px 22px;display:flex;flex-direction:column;gap:8px;animation:g-in .4s ease both">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span data-anim="emoji" style="flex:none;width:58px;height:58px;border-radius:50%;background:#FBFCF9;display:flex;align-items:center;justify-content:center;font-size:30px;animation:g-sway 3s ease-in-out infinite">{{ cur.icon }}</span>
+        <div style="display:flex;flex-direction:column;line-height:1.3">
+          <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.3em;color:#2F4A3A">CHAPTER {{ cur.no }}</span>
+          <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:11px;letter-spacing:.15em;color:#5A4E49">{{ cur.en }}</span>
+        </div>
+      </div>
+      <h1 style="margin:4px 0 0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(22px,6vw,28px);line-height:1.45;color:#2F4A3A">{{ cur.title }}</h1>
+      <p style="margin:0;font-size:13.5px;line-height:1.85">{{ cur.lead }}</p>
+    </section>
+
+    <sc-if value="{{ cur.isClock }}">
+      <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <span style="align-self:flex-start;font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">24H BODY CLOCK</span>
+        <svg viewBox="-14 -14 228 228" style="width:100%;max-width:260px;display:block">
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#C9A86A" stroke-width="24" stroke-dasharray="144 296" transform="rotate(-30 100 100)"></circle>
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#B7C2AE" stroke-width="24" stroke-dasharray="144 296" transform="rotate(90 100 100)"></circle>
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#2F4A3A" stroke-width="24" stroke-dasharray="144 296" transform="rotate(210 100 100)"></circle>
+          <circle cx="100" cy="100" r="48" fill="#F2F6EF"></circle>
+          <line x1="100" y1="100" x2="100" y2="66" stroke="#574B47" stroke-width="3" stroke-linecap="round"></line>
+          <line x1="100" y1="100" x2="124" y2="100" stroke="#574B47" stroke-width="3" stroke-linecap="round"></line>
+          <circle cx="100" cy="100" r="4" fill="#574B47"></circle>
+          <text x="100" y="0" text-anchor="middle" font-family="Raleway" font-size="12" fill="#574B47">0</text>
+          <text x="200" y="104" text-anchor="middle" font-family="Raleway" font-size="12" fill="#574B47">6</text>
+          <text x="100" y="210" text-anchor="middle" font-family="Raleway" font-size="12" fill="#574B47">12</text>
+          <text x="0" y="104" text-anchor="middle" font-family="Raleway" font-size="12" fill="#574B47">18</text>
+          <text x="161" y="141" text-anchor="middle" font-size="20">🌅</text>
+          <text x="39" y="141" text-anchor="middle" font-size="20">🌞</text>
+          <text x="100" y="37" text-anchor="middle" font-size="20">🌙</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:8px;width:100%">
+          <div style="display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:10px;align-items:center;padding:10px 12px;border-radius:16px;background:#F6EFDF"><span style="font-size:22px">🌅</span><span style="display:flex;flex-direction:column;line-height:1.3"><strong style="font-weight:700;font-size:13px">朝</strong><span style="font-family:'Raleway',sans-serif;font-size:11px">4:00–12:00</span></span><span style="font-size:12px;line-height:1.6"><strong style="font-weight:700">出す時間</strong>　排泄が得意。果物や水分など軽めに、という考え方。</span></div>
+          <div style="display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:10px;align-items:center;padding:10px 12px;border-radius:16px;background:#E3E8DE"><span style="font-size:22px">🌞</span><span style="display:flex;flex-direction:column;line-height:1.3"><strong style="font-weight:700;font-size:13px">昼</strong><span style="font-family:'Raleway',sans-serif;font-size:11px">12:00–20:00</span></span><span style="font-size:12px;line-height:1.6"><strong style="font-weight:700">とり入れる時間</strong>　食べて、消化するのが得意。</span></div>
+          <div style="display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:10px;align-items:center;padding:10px 12px;border-radius:16px;background:#2F4A3A;color:#F3EADC"><span style="font-size:22px">🌙</span><span style="display:flex;flex-direction:column;line-height:1.3"><strong style="font-weight:700;font-size:13px">夜</strong><span style="font-family:'Raleway',sans-serif;font-size:11px">20:00–4:00</span></span><span style="font-size:12px;line-height:1.6"><strong style="font-weight:700">吸収・利用の時間</strong>　食べたものでカラダをつくる。</span></div>
+        </div>
+      </section>
+    </sc-if>
+    <sc-if value="{{ cur.isGraph }}">
+      <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">BLOOD SUGAR</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:16px">血糖値の波のイメージ</p>
+        <svg viewBox="0 0 320 170" style="width:100%;display:block">
+          <line x1="24" y1="10" x2="24" y2="146" stroke="#B7C2AE" stroke-width="1"></line>
+          <line x1="24" y1="146" x2="314" y2="146" stroke="#B7C2AE" stroke-width="1"></line>
+          <line x1="24" y1="88" x2="314" y2="88" stroke="#E3E8DE" stroke-width="1" stroke-dasharray="4 4"></line>
+          <text x="14" y="80" font-size="10" fill="#6E615C" transform="rotate(-90 14 80)" text-anchor="middle">血糖値</text>
+          <text x="314" y="162" font-size="10" fill="#6E615C" text-anchor="end">時間 →</text>
+          <path d="M26 110 C50 110 60 22 88 24 C116 26 124 138 152 134 C176 130 186 34 212 32 C238 30 252 140 280 136 L312 124" fill="none" stroke="#C97F78" stroke-width="3" stroke-linecap="round"></path>
+          <path d="M26 100 C70 92 96 80 136 84 C176 88 204 76 244 80 C274 83 292 78 312 80" fill="none" stroke="#2F4A3A" stroke-width="3" stroke-linecap="round"></path>
+          <text x="88" y="16" font-size="9.5" fill="#9A4A44" text-anchor="middle">急上昇</text>
+          <text x="152" y="160" font-size="9.5" fill="#9A4A44" text-anchor="middle">急降下 → 甘いもの欲</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:12px;line-height:1.6">
+          <div style="display:flex;gap:8px;align-items:center"><span style="flex:none;width:22px;height:3px;border-radius:2px;background:#C97F78"></span><span>お腹がすきすぎてから、一気に食べる</span></div>
+          <div style="display:flex;gap:8px;align-items:center"><span style="flex:none;width:22px;height:3px;border-radius:2px;background:#2F4A3A"></span><span><strong style="font-weight:700">間にちょこっと間食をはさむ</strong>　→ 波がゆるやか</span></div>
+        </div>
+        <p style="margin:4px 0 0;padding:10px 12px;border-radius:14px;background:#F3EADC;font-size:12.5px;line-height:1.75">血糖値の波が激しいほど、<strong style="font-weight:700">気分の波も激しくなりやすい</strong>んです。急に上がったあとに急に下がると、イライラ・だるさ・眠気・集中できない…につながることも。波をゆるやかにすると、気持ちも安定しやすくなります。</p>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ cur.hasSeason }}">
+      <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 0 0 1px #C9A86A inset">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">MY KITCHEN SCORE</span>
+        <div style="display:flex;align-items:baseline;gap:6px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:44px;line-height:1;color:#2F4A3A">{{ sScore }}</span><span style="font-size:13px">/ {{ sTotal }} 点</span><span style="margin-left:auto;font-size:12px;font-weight:700;color:#2F4A3A">{{ sMsg }}</span></div>
+        <div style="height:8px;border-radius:999px;background:#E3E8DE;overflow:hidden"><div style="height:8px;border-radius:999px;background:#55745D;transition:width .5s ease;width:{{ sPct }}"></div></div>
+        <p style="margin:0;font-size:12px;color:#5A4E49">各調味料をタップして、原材料表示を見比べてね。おうちの調味料のラベルを見て、「◎の例」と同じような原材料なら、ボタンを押してね。</p>
+      </section>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ seasons }}" as="s" hint-placeholder-count="8">
+          <section style="border-radius:22px;overflow:hidden;background:{{ s.rowBg }}">
+            <button onClick="{{ s.toggleOpen }}" style="width:100%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 16px;min-height:56px;color:#574B47;text-align:left">
+              <span style="flex:none;width:38px;height:38px;border-radius:50%;background:#2F4A3A;color:#F3EADC;display:flex;align-items:center;justify-content:center;font-family:'Kanata','Kiwi Maru',serif;font-size:17px">{{ s.k }}</span>
+              <span style="flex:1;font-family:'Kanata','Kiwi Maru',serif;font-size:17px">{{ s.name }}</span>
+              <sc-if value="{{ s.on }}"><span style="padding:0 8px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:11px;font-weight:700">✓ OK</span></sc-if>
+              <span style="flex:none;font-size:18px;color:#2F4A3A">{{ s.arrow }}</span>
+            </button>
+            <sc-if value="{{ s.op }}">
+              <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:10px;animation:g-in .3s ease both">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px">
+                  <div style="background:#FBFCF9;border-radius:16px;padding:12px;box-shadow:0 0 0 1.5px #55745D inset"><span style="display:inline-block;padding:0 8px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:11px;font-weight:700">◎ こんな原材料表示ならOK</span><p style="margin:6px 0 0;font-size:12.5px;line-height:1.7;white-space:pre-line">{{ s.ok }}</p></div>
+                  <div style="background:#FBFCF9;border-radius:16px;padding:12px;box-shadow:0 0 0 1px #E8C4C0 inset"><span style="display:inline-block;padding:0 8px;border-radius:999px;background:#E8C4C0;color:#574B47;font-size:11px;font-weight:700">△ こんな表示は見直しどき</span><p style="margin:6px 0 0;font-size:12.5px;line-height:1.7;white-space:pre-line">{{ s.ng }}</p></div>
+                </div>
+                <sc-if value="{{ s.hasHow }}">
+                  <div style="background:#FBFCF9;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:6px"><strong style="font-weight:700;font-size:12.5px">パッケージの「工程」をチェック</strong>
+                    <sc-for list="{{ s.how }}" as="w"><div style="display:flex;gap:8px;align-items:baseline;font-size:12px;line-height:1.6"><span style="flex:none;padding:0 7px;border-radius:999px;font-weight:700;background:{{ w.mBg }};color:{{ w.mFg }}">{{ w.m }}</span><span><strong style="font-weight:700">{{ w.h }}</strong>　{{ w.t }}</span></div></sc-for>
+                  </div>
+                </sc-if>
+                <div style="display:flex;gap:8px;align-items:baseline;font-size:12px;line-height:1.6"><span style="flex:none;padding:0 8px;border-radius:999px;background:#F3EADC;font-weight:700">価格の目安</span><span>{{ s.price }}</span></div>
+                <div style="background:#F3EADC;border-radius:16px;padding:12px;font-size:12.5px;line-height:1.75"><strong style="font-weight:700;color:#2F4A3A">なんで安いの？</strong><br>{{ s.why }}</div>
+                <sc-if value="{{ s.hasMemo }}"><p style="margin:0;font-size:12.5px;line-height:1.75">🐰 {{ s.memo }}</p></sc-if>
+                <button onClick="{{ s.toggleChk }}" style="align-self:flex-start;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #2F4A3A;cursor:pointer;font-size:13px;font-weight:700;background:{{ s.chkBg }};color:{{ s.chkFg }}">{{ s.chkLabel }}</button>
+              </div>
+            </sc-if>
+          </section>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ cur.hasColumn }}">
+      <section style="background:#EEF2EA;color:#574B47;border-radius:24px;padding:20px 18px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em">COLUMN</span>
+        <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:19px">{{ cur.column.title }}</h2>
+        <p style="margin:0;font-size:13px;line-height:1.8">{{ cur.column.lead }}</p>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px">
+          <sc-for list="{{ cur.column.items }}" as="a" hint-placeholder-count="6"><div style="border:1px solid #55745D;border-radius:14px;padding:8px 10px;display:flex;flex-direction:column;line-height:1.4"><strong style="font-weight:700;font-size:12.5px">{{ a.n }}</strong><span style="font-size:11px;color:#5A4E49">{{ a.s }}</span></div></sc-for>
+        </div>
+        <strong style="font-weight:700;font-size:13.5px;margin-top:4px">なんで気をつけたいの？</strong>
+        <sc-for list="{{ cur.column.why }}" as="w"><div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;padding:8px 0;border-top:1px dashed #55745D"><span style="min-width:34px;height:30px;padding:0 6px;box-sizing:border-box;border-radius:999px;background:#F3EADC;color:#2F4A3A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">{{ w.k }}</span><span style="display:flex;flex-direction:column"><strong style="font-weight:700;font-size:13px">{{ w.h }}</strong><span style="font-size:12px;line-height:1.7">{{ w.t }}</span></span></div></sc-for>
+        <div style="background:#FBFCF9;border-radius:16px;padding:12px;font-size:12px;line-height:1.7"><strong style="font-weight:700">よく入っているもの</strong><br>{{ cur.column.where }}</div>
+        <p style="margin:0;font-size:12.5px;line-height:1.75">🐰 {{ cur.column.memo }}</p>
+      </section>
+    </sc-if>
+
+    <sc-for list="{{ cur.sections }}" as="s" hint-placeholder-count="2">
+      <section style="position:relative;border-radius:24px;padding:20px 18px 12px;display:flex;flex-direction:column;animation:g-in .45s ease both;background:{{ s.bg }};box-shadow:{{ s.ring }};transform:{{ s.rot }};color:{{ s.fg }}">
+        <sc-if value="{{ s.hasTape }}"><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(-3deg);width:90px;height:18px;border-radius:3px;background:{{ s.tape }}"></span></sc-if>
+        <sc-if value="{{ s.hasIll }}"><span data-anim="emoji" style="position:absolute;top:-16px;right:14px;width:48px;height:48px;border-radius:50%;background:#FBFCF9;box-shadow:0 4px 12px rgba(85,116,93,.18);display:flex;align-items:center;justify-content:center;font-size:26px;animation:g-sway 3.2s ease-in-out infinite">{{ s.ill }}</span></sc-if>
+        <h2 style="margin:0 56px 8px 0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:18px;line-height:1.5;color:{{ s.hc }}"><span style="padding:0 4px;background:linear-gradient({{ s.mk }},{{ s.mk }}) no-repeat 0 88%/100% 42%">{{ s.h }}</span></h2>
+        <sc-if value="{{ s.hasP }}"><p style="margin:0 0 8px;line-height:1.8;font-size:{{ s.pfs }};font-weight:{{ s.pfw }}">{{ s.p }}</p></sc-if>
+        <div style="display:grid;grid-template-columns:{{ s.cols }};gap:{{ s.igap }}">
+        <sc-for list="{{ s.items }}" as="it">
+          <div style="display:grid;gap:10px;align-items:start;align-content:start;grid-template-columns:{{ s.icols }};padding:{{ s.ipad }};border-top:{{ s.ibor }};background:{{ s.ibg }};border-radius:{{ s.irad }}">
+            <span style="justify-self:start;padding:0 6px;box-sizing:border-box;border-radius:999px;display:flex;align-items:center;justify-content:center;font-family:'Kanata','Kiwi Maru','Zen Maru Gothic',sans-serif;line-height:1;background:{{ it.kBg }};color:{{ it.kFg }};min-width:{{ s.kSize }};height:{{ s.kSize }};font-size:{{ s.kFs }}">{{ it.k }}</span>
+            <span style="display:flex;flex-direction:column;gap:1px"><strong style="font-weight:700;font-size:13.5px;line-height:1.6">{{ it.h }}</strong><span style="font-size:12.5px;line-height:1.75;empty-cells:hide">{{ it.t }}</span><sc-if value="{{ it.hasW }}"><span style="margin-top:4px;padding:6px 10px;border-radius:12px;background:#F8ECEA;color:#9A4A44;font-size:12px;line-height:1.7;font-weight:700">😰 {{ it.w }}</span></sc-if></span>
+          </div>
+        </sc-for>
+        </div>
+      </section>
+    </sc-for>
+
+    <sc-if value="{{ cur.isChanges }}">
+      <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">AFTER YURUFAS</span>
+        <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:16px">7日間で、どう変わった？</p><span style="margin-left:auto;font-family:'Raleway',sans-serif;font-weight:300;font-size:18px;color:#2F4A3A">{{ chgCount }} / {{ chgTotal }}</span></div>
+        <p style="margin:0;font-size:12px;color:#5A4E49">終わったら、感じたことにチェックしてみてね♡</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <sc-for list="{{ changes }}" as="g" hint-placeholder-count="13"><button onClick="{{ g.toggle }}" style="display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #B7C2AE;cursor:pointer;font-size:12px;font-weight:700;background:{{ g.bg }};color:{{ g.fg }}">{{ g.mark }} {{ g.t }}</button></sc-for>
+        </div>
+      </section>
+    </sc-if>
+    <sc-if value="{{ cur.hasLinks }}">
+      <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">USASHIHO SHOP</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:16px">{{ cur.linksTitle }}</p>
+        <sc-for list="{{ cur.links }}" as="l" hint-placeholder-count="2">
+          <a href="{{ l.href }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;background:#E3E8DE;text-decoration:none;color:#574B47;min-height:56px"><span style="flex:none;width:48px;height:48px;border-radius:14px;background:#FBFCF9;display:flex;align-items:center;justify-content:center;font-size:26px">{{ l.icon }}</span><span style="flex:1;display:flex;flex-direction:column;line-height:1.5;min-width:0"><strong style="font-weight:700;font-size:14px;color:#2F4A3A">{{ l.label }}</strong><span style="font-size:12px">{{ l.sub }}</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:4px;padding:8px 12px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:12px;font-weight:700;white-space:nowrap">🛒 ショップへ</span></a>
+        </sc-for>
+      </section>
+    </sc-if>
+    <sc-if value="{{ cur.hasNote }}">
+      <section style="background:#F3EADC;border-radius:24px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start">
+        <span style="flex:none;font-size:22px;line-height:1">🐰</span>
+        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">USASHIHO MEMO</span><p style="margin:0;font-size:13px;line-height:1.8">{{ cur.note }}</p></div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ cur.hasChallenge }}">
+      <section style="background:#E3E8DE;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">TRY THIS</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:16px;line-height:1.6">{{ cur.challenge }}</p>
+        <button onClick="{{ toggleTried }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:700;border:1px solid #2F4A3A;background:{{ triedBg }};color:{{ triedFg }}">{{ triedLabel }}</button>
+      </section>
+      <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.25em;color:#2F4A3A">MY BODY NOTE</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:16px;line-height:1.5">やってみて、カラダはどうだった？</p>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+          <sc-for list="{{ fitOpts }}" as="f" hint-placeholder-count="3">
+            <button onClick="{{ f.pick }}" style="min-height:52px;border-radius:16px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;font-size:12px;font-weight:700;line-height:1.4;border:1px solid #B7C2AE;background:{{ f.bg }};color:{{ f.fg }}"><span style="font-size:18px">{{ f.icon }}</span>{{ f.label }}</button>
+          </sc-for>
+        </div>
+        <p style="margin:0;font-size:11.5px;color:#5A4E49">正解はひとつじゃないから、カラダの声で選んでOK。「合わない」とわかったことも、大事な発見です。</p>
+      </section>
+    </sc-if>
+
+    <button onClick="{{ markRead }}" style="min-height:58px;border-radius:999px;cursor:pointer;font-size:16px;font-weight:700;letter-spacing:.04em;border:none;background:{{ readBtnBg }};color:{{ readBtnFg }};display:flex;align-items:center;justify-content:center;gap:8px">{{ readBtnLabel }}</button>
+
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+      <button onClick="{{ goPrev }}" style="min-height:48px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#2F4A3A;font-size:12px;font-weight:700;cursor:pointer;visibility:{{ prevVis }}">← {{ prevTitle }}</button>
+      <button onClick="{{ goNext }}" style="min-height:48px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#2F4A3A;font-size:12px;font-weight:700;cursor:pointer;visibility:{{ nextVis }}">{{ nextTitle }} →</button>
+    </div>
+    <p style="margin:4px 0 0;text-align:center;font-size:12px;color:#5A4E49">💬 気になったことは、専用LINEの「質問ノート」へお気軽に🐰</p>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isReport }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:560px;margin:0 auto;padding:18px 16px 48px;display:flex;flex-direction:column;gap:14px">
+    <sc-if value="{{ rp.isMode }}">
+      <section style="background:#F6EFDF;border-radius:28px;padding:24px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:g-in .4s ease both">
+        <span style="font-size:44px;line-height:1;animation:g-sway 3s ease-in-out infinite">🕯️</span>
+        <span style="font-family:'Raleway',sans-serif;font-size:10px;letter-spacing:.3em;color:#2F4A3A">DAILY REPORT</span>
+        <h1 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:22px;line-height:1.5;color:#2F4A3A">今日の自分を見つめよう</h1>
+        <p style="margin:0;font-size:12.5px;line-height:1.8">タップで答えるだけ。<br>最後にシェア用の文章ができあがります🌿</p>
+      </section>
+      <span style="text-align:center;font-size:13px;font-weight:700;color:#2F4A3A">モードを選んでね</span>
+      <sc-for list="{{ rp.modes }}" as="m" hint-placeholder-count="3">
+        <button onClick="{{ m.pick }}" style="display:flex;align-items:center;gap:14px;padding:14px 18px;border:none;border-radius:20px;background:#FBFCF9;box-shadow:0 0 0 1px #D3DDCB inset;cursor:pointer;text-align:left;color:#574B47" style-hover="box-shadow:0 0 0 2px #2F4A3A inset" style-active="transform:scale(.98)"><span style="flex:none;width:48px;height:48px;border-radius:16px;background:#E3E8DE;display:flex;align-items:center;justify-content:center;font-size:26px">{{ m.icon }}</span><span style="flex:1;display:flex;flex-direction:column;line-height:1.4"><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:17px;color:#2F4A3A">{{ m.name }}モード</span><span style="font-size:12px">{{ m.desc }}</span></span><span style="flex:none;padding:3px 10px;border-radius:999px;background:#E3E8DE;color:#2F4A3A;font-family:'Raleway',sans-serif;font-size:12px">{{ m.time }}</span></button>
+      </sc-for>
+    </sc-if>
+
+    <sc-if value="{{ rp.isQ }}">
+      <div style="display:flex;align-items:center;gap:10px">
+        <button onClick="{{ rp.toModes }}" style="flex:none;min-height:36px;padding:0 12px;border:none;border-radius:999px;background:#E3E8DE;color:#2F4A3A;font-size:11.5px;font-weight:700;cursor:pointer">モード変更</button>
+        <div style="flex:1;height:8px;border-radius:999px;background:#E3E8DE;overflow:hidden"><div style="height:8px;border-radius:999px;background:linear-gradient(90deg,#B7C2AE,#2F4A3A);transition:width .35s ease;width:{{ rp.q.pct }}"></div></div>
+        <span style="flex:none;font-family:'Raleway',sans-serif;font-size:13px;color:#2F4A3A">{{ rp.q.no }}/{{ rp.q.n }}</span>
+      </div>
+      <section style="background:#FBFCF9;border-radius:28px;padding:24px 18px 20px;display:flex;flex-direction:column;gap:16px;min-height:360px;box-sizing:border-box;box-shadow:0 8px 24px rgba(85,116,93,.12);animation:g-in .3s ease both">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+          <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:21px;line-height:1.5;color:#2F4A3A">{{ rp.q.title }}</h2>
+          <span style="font-size:12px;color:#6E615C">{{ rp.q.sub }}</span>
+        </div>
+        <sc-if value="{{ rp.q.isStart }}">
+          <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px">
+            <sc-for list="{{ rp.q.days }}" as="d" hint-placeholder-count="7">
+              <button onClick="{{ d.pick }}" style="aspect-ratio:1/1;border-radius:14px;border:1px solid #B7C2AE;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;transition:all .15s;background:{{ d.bg }};color:{{ d.fg }}"><span style="font-family:'Raleway',sans-serif;font-size:8px;letter-spacing:.1em">DAY</span><span style="font-family:'Raleway',sans-serif;font-size:18px">{{ d.d }}</span></button>
+            </sc-for>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#2F4A3A">ニックネーム<input type="text" value="{{ rp.q.nameVal }}" onChange="{{ rp.q.setName }}" placeholder="例：しほ" style="min-height:46px;padding:10px 14px;border-radius:14px;border:1px solid #D3DDCB;background:#FAF5EC;font-family:inherit;font-size:16px;font-weight:400;color:#574B47"></label>
+        </sc-if>
+        <sc-if value="{{ rp.q.isPick }}">
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+            <sc-for list="{{ rp.q.opts }}" as="o" hint-placeholder-count="4">
+              <button onClick="{{ o.pick }}" style="min-height:76px;padding:10px 8px;border:none;border-radius:20px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;transition:transform .15s ease,background .15s ease,box-shadow .15s ease;background:{{ o.bg }};color:{{ o.fg }};box-shadow:{{ o.ring }};transform:{{ o.tf }}" style-active="transform:scale(.95)"><sc-if value="{{ o.hasEm }}"><span style="font-size:26px;line-height:1">{{ o.em }}</span></sc-if><span style="font-size:13px;font-weight:700;line-height:1.4">{{ o.tx }}</span></button>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ rp.q.isText }}">
+          <textarea value="{{ rp.q.val }}" onChange="{{ rp.q.input }}" placeholder="{{ rp.q.ph }}" rows="4" style="width:100%;box-sizing:border-box;padding:14px;border-radius:18px;border:1px solid #D3DDCB;background:#FAF5EC;font-family:inherit;font-size:16px;line-height:1.7;color:#574B47;resize:none"></textarea>
+        </sc-if>
+        <sc-if value="{{ rp.q.isMeal }}">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ rp.q.inputs }}" as="i" hint-placeholder-count="4">
+              <label style="display:grid;grid-template-columns:4em minmax(0,1fr);align-items:center;gap:8px;font-size:13px;font-weight:700;color:#2F4A3A">{{ i.label }}<input type="text" value="{{ i.val }}" onChange="{{ i.input }}" placeholder="{{ i.ph }}" style="min-height:44px;padding:8px 12px;border-radius:12px;border:1px solid #D3DDCB;background:#FAF5EC;font-family:inherit;font-size:16px;font-weight:400;color:#574B47"></label>
+            </sc-for>
+          </div>
+        </sc-if>
+        <div style="margin-top:auto;display:flex;gap:10px">
+          <sc-if value="{{ rp.q.canBack }}"><button onClick="{{ rp.q.back }}" style="flex:1;min-height:50px;border-radius:999px;border:none;background:#E3E8DE;color:#2F4A3A;font-size:14px;font-weight:700;cursor:pointer">← 戻る</button></sc-if>
+          <sc-if value="{{ rp.q.showNext }}"><button onClick="{{ rp.q.next }}" style="flex:2;min-height:50px;border-radius:999px;border:none;background:#2F4A3A;color:#F3EADC;font-size:14px;font-weight:700;cursor:pointer" style-active="transform:scale(.97)">{{ rp.q.nextLabel }}</button></sc-if>
+        </div>
+      </section>
+      <p style="margin:0;text-align:center;font-size:11px;color:#6E615C">選ぶと自動で次へ進みます</p>
+    </sc-if>
+
+    <sc-if value="{{ rp.isDone }}">
+      <section style="background:#F6EFDF;border-radius:28px;padding:22px 20px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;animation:g-pop .6s cubic-bezier(.3,1.4,.5,1) both">
+        <span style="font-size:40px;line-height:1">🎉</span>
+        <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:20px;color:#2F4A3A">今日のレポート、完成！</h2>
+        <p style="margin:0;font-size:13px">{{ rp.cheer }}</p>
+      </section>
+      <pre style="margin:0;padding:16px;border-radius:20px;background:#FBFCF9;box-shadow:0 0 0 1px #D3DDCB inset;font-family:'Zen Maru Gothic',sans-serif;font-size:13px;line-height:1.85;white-space:pre-wrap;color:#574B47;max-height:320px;overflow:auto">{{ rp.text }}</pre>
+      <button onClick="{{ rp.copy }}" style="min-height:56px;border-radius:999px;border:none;background:#2F4A3A;color:#F3EADC;font-size:15px;font-weight:700;cursor:pointer" style-active="transform:scale(.97)">{{ rp.copyLabel }}</button>
+      <p style="margin:-4px 0 0;text-align:center;font-size:12px;font-weight:700;color:#2F4A3A">コピーして、オープンチャットに貼ってね🐰</p>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+        <button onClick="{{ rp.edit }}" style="min-height:46px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#2F4A3A;font-size:12px;font-weight:700;cursor:pointer">✏️ 修正する</button>
+        <button onClick="{{ rp.reset }}" style="min-height:46px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#2F4A3A;font-size:12px;font-weight:700;cursor:pointer">🔄 やり直す</button>
+        <button onClick="{{ rp.home }}" style="min-height:46px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#2F4A3A;font-size:12px;font-weight:700;cursor:pointer">🏠 一覧へ</button>
+      </div>
+    </sc-if>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isCheck }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:640px;margin:0 auto;padding:18px 16px 64px;display:flex;flex-direction:column;gap:14px">
+    <sc-if value="{{ bc.bcQuiz }}">
+      <section style="background:#FBFCF9;border-radius:28px;padding:20px 18px;display:flex;flex-direction:column;gap:14px;animation:g-in .3s ease both">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><span style="padding:2px 12px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:.2em">{{ bc.q.round }}</span><span style="font-family:'Raleway',sans-serif;font-size:13px;color:#2F4A3A">Q{{ bc.q.no }} / {{ bc.q.n }}</span></div>
+        <div style="height:6px;border-radius:999px;background:#E3E8DE;overflow:hidden"><div style="height:6px;border-radius:999px;background:#7E8F77;transition:width .3s ease;width:{{ bc.q.pct }}"></div></div>
+        <span style="font-size:12px;font-weight:700;color:#2F4A3A">{{ bc.q.cat }}</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:19px;line-height:1.55;color:#2F4A3A">{{ bc.q.q }}</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ bc.q.opts }}" as="o" hint-placeholder-count="3">
+            <button onClick="{{ o.pick }}" style="min-height:52px;padding:10px 16px;border-radius:16px;border:1px solid #B7C2AE;background:#FAF5EC;color:#574B47;font-size:14px;font-weight:500;text-align:left;cursor:pointer" style-hover="background:#E3E8DE">{{ o.t }}</button>
+          </sc-for>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:8px">
+          <sc-if value="{{ bc.q.canBack }}"><button onClick="{{ bc.q.back }}" style="min-height:44px;padding:0 14px;border:none;background:transparent;color:#2F4A3A;font-size:12.5px;font-weight:700;cursor:pointer">← 前の質問へ</button></sc-if>
+          <button onClick="{{ bc.q.quit }}" style="margin-left:auto;min-height:44px;padding:0 14px;border:none;background:transparent;color:#6E615C;font-size:12px;cursor:pointer">中断する</button>
+        </div>
+      </section>
+    </sc-if>
+    <sc-if value="{{ bc.bcIdle }}">
+      <section style="background:#E3E8DE;border-radius:28px;padding:22px 20px;display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.3em;color:#2F4A3A">BODY CHECK</span>
+        <h1 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(22px,6vw,28px);line-height:1.45;color:#2F4A3A">ビフォーアフター<br>カラダチェック</h1>
+        <p style="margin:0;font-size:13px">25の質問に答えるだけ（約3分）。<br><strong style="font-weight:700">スタート前と最終日の2回</strong>チェックして、<br>7日間でどう変わったか見てみよう🐰</p>
+      </section>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+        <sc-for list="{{ bc.cards }}" as="c" hint-placeholder-count="2">
+          <div style="background:{{ c.bg }};border-radius:22px;padding:16px 14px;display:flex;flex-direction:column;gap:6px;min-height:170px;box-sizing:border-box">
+            <span style="font-family:'Raleway',sans-serif;font-size:12px;letter-spacing:.25em;color:#2F4A3A">{{ c.label }}</span>
+            <span style="font-size:11px;line-height:1.5">{{ c.when }}</span>
+            <sc-if value="{{ c.done }}"><span style="display:flex;align-items:baseline;gap:3px;color:#2F4A3A"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:34px;line-height:1">{{ c.score }}</span><span style="font-size:11px">/ {{ bc.total }}点</span></span><span style="font-size:12px;font-weight:700">{{ c.lvIcon }} {{ c.lvName }}</span><span style="font-size:10.5px;color:#6E615C">{{ c.date }}</span></sc-if>
+            <sc-if value="{{ c.notDone }}"><span style="font-size:12px;color:#6E615C">まだチェックしていません</span></sc-if>
+            <button onClick="{{ c.start }}" style="margin-top:auto;min-height:44px;border-radius:999px;border:none;background:#2F4A3A;color:#F3EADC;font-size:12.5px;font-weight:700;cursor:pointer">{{ c.btn }}</button>
+          </div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ bc.hasBoth }}">
+        <section style="background:#FBFCF9;border:1px solid #C9A86A;border-radius:24px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;animation:g-pop .6s cubic-bezier(.3,1.4,.5,1) both">
+          <span style="font-family:'Raleway',sans-serif;font-size:10px;letter-spacing:.3em;color:#2F4A3A">MY CHANGE</span>
+          <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:26px;color:#2F4A3A">{{ bc.diffTxt }}</span>
+          <span style="font-size:12.5px">{{ bc.diffMsg }}</span>
+        </section>
+      </sc-if>
+      <sc-if value="{{ bc.onlyBefore }}">
+        <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:30px;line-height:1">{{ bc.oneIcon }}</span>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:17px;color:#2F4A3A">いまのあなたは「{{ bc.oneName }}」</span><span style="font-size:12.5px">{{ bc.oneMsg }}</span><span style="font-size:12px;font-weight:700;color:#2F4A3A">最終日（DAY7）に、もう一度チェックしてね🐰</span></div>
+        </section>
+      </sc-if>
+      <sc-if value="{{ bc.hasAny }}">
+        <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:16px;color:#2F4A3A">項目ごとのスコア</span><span style="display:flex;gap:10px;font-size:11px"><span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:6px;border-radius:3px;background:#E6D3A8"></span>BEFORE</span><span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:6px;border-radius:3px;background:#2F4A3A"></span>AFTER</span></span></div>
+          <sc-for list="{{ bc.bars }}" as="b" hint-placeholder-count="4">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <div style="display:flex;justify-content:space-between;font-size:12.5px;font-weight:700"><span>{{ b.label }}</span><span style="font-family:'Raleway',sans-serif;font-weight:400;color:#2F4A3A">{{ b.diff }}</span></div>
+              <sc-if value="{{ bc.showB }}"><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;border-radius:999px;background:#F2F6EF;overflow:hidden"><div style="height:8px;border-radius:999px;background:#E6D3A8;width:{{ b.bw }}"></div></div><span style="flex:none;width:44px;text-align:right;font-family:'Raleway',sans-serif;font-size:11px">{{ b.b }}/{{ b.max }}</span></div></sc-if>
+              <sc-if value="{{ bc.showA }}"><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;border-radius:999px;background:#F2F6EF;overflow:hidden"><div style="height:8px;border-radius:999px;background:#2F4A3A;width:{{ b.aw }}"></div></div><span style="flex:none;width:44px;text-align:right;font-family:'Raleway',sans-serif;font-size:11px">{{ b.a }}/{{ b.max }}</span></div></sc-if>
+            </div>
+          </sc-for>
+          <p style="margin:0;font-size:12px;font-weight:700;color:#2F4A3A">📸 この画面をスクショして、専用LINEでシェアしてね</p>
+        </section>
+      </sc-if>
+      <p style="margin:0;padding:0 4px;font-size:11.5px;line-height:1.8;color:#6E615C">※ このチェックは、診断ではなくセルフチェックです。<br>満点だから「心とカラダのバランスが最高に整っている」というわけではなく、あくまで<strong style="font-weight:700">ひとつの目安</strong>として作っています。点数に左右されすぎず、数字よりも「自分のカラダの声」を大切にしてね🐰</p>
+    </sc-if>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isPlan }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:640px;margin:0 auto;padding:18px 16px 64px;display:flex;flex-direction:column;gap:14px">
+    <section style="background:#F6EFDF;border-radius:28px;padding:22px 20px;display:flex;flex-direction:column;gap:6px">
+      <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:10px;letter-spacing:.3em;color:#2F4A3A">MY 7 DAYS PLAN</span>
+      <h1 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:24px;line-height:1.45">わたしの7日間プラン</h1>
+      <p style="margin:0;font-size:13px">きっちり決めなくてOK。おすすめは「1食・2食の置き換え」か「おやつの代わりにドリンク」。1週間シンプルに「朝ファスだけ」もアリ！1日ファスは、経験のある方だけにしてね。</p>
+    </section>
+
+    <section style="background:#FBFCF9;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:12px">
+      <label style="display:flex;flex-direction:column;gap:6px"><strong style="font-weight:700;font-size:13px">STEP 1｜ニックネーム</strong><input value="{{ pName }}" onChange="{{ setName }}" placeholder="例：うさこ" style="width:100%;box-sizing:border-box;border:1px solid #D3DDCB;border-radius:14px;padding:10px 12px;font-family:inherit;font-size:14px;color:#574B47;background:#FBFCF9;outline-color:#55745D"></label>
+      <label style="display:flex;flex-direction:column;gap:6px"><strong style="font-weight:700;font-size:13px">STEP 2｜この1週間の目標</strong><input value="{{ pGoal }}" onChange="{{ setGoal }}" placeholder="例：朝の白湯と、ひと口100回噛むを続ける" style="width:100%;box-sizing:border-box;border:1px solid #D3DDCB;border-radius:14px;padding:10px 12px;font-family:inherit;font-size:14px;color:#574B47;background:#FBFCF9;outline-color:#55745D"></label>
+    </section>
+
+    <details style="background:#FBFCF9;border-radius:24px;padding:14px 18px">
+      <summary style="cursor:pointer;min-height:40px;display:flex;align-items:center;font-weight:700;font-size:13px">STEP 3｜なりたい自分を書き出そう（任意）＋</summary>
+      <p style="margin:4px 0 10px;font-size:12px;color:#5A4E49">ファスティングは「終えること」がゴールじゃない。なりたい自分になるための、習慣を見直すキッカケです。</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ wants }}" as="w" hint-placeholder-count="6"><label style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12.5px">{{ w.q }}</span><textarea value="{{ w.v }}" onChange="{{ w.set }}" rows="2" style="width:100%;box-sizing:border-box;border:1px solid #D3DDCB;border-radius:14px;padding:10px 12px;font-family:inherit;font-size:14px;color:#574B47;background:#FBFCF9;outline-color:#55745D;resize:vertical;font-size:13px"></textarea></label></sc-for>
+      </div>
+    </details>
+
+    <section style="display:flex;flex-direction:column;gap:8px">
+      <strong style="font-weight:700;font-size:13px;padding:0 4px">STEP 4｜1日ずつ決めよう</strong>
+      <sc-for list="{{ pdays }}" as="d" hint-placeholder-count="7">
+        <div style="background:#FBFCF9;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:20px;color:#2F4A3A">{{ d.label }}</span><span style="font-family:'Raleway',sans-serif;font-size:10px;letter-spacing:.2em;color:#5A4E49">{{ d.dow }}</span></div>
+          <input value="{{ d.plan }}" onChange="{{ d.setPlan }}" placeholder="予定（例：仕事、ランチ会、おやすみ）" style="width:100%;box-sizing:border-box;border:1px solid #D3DDCB;border-radius:14px;padding:10px 12px;font-family:inherit;font-size:14px;color:#574B47;background:#FBFCF9;outline-color:#55745D;font-size:13px">
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
+            <sc-for list="{{ d.pats }}" as="p"><button onClick="{{ p.pick }}" style="min-height:44px;border-radius:14px;cursor:pointer;font-size:11.5px;font-weight:700;line-height:1.3;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid {{ p.bd }};background:{{ p.bgc }};color:{{ p.fgc }}"><span style="font-size:15px">{{ p.icon }}</span>{{ p.v }}</button></sc-for>
+          </div>
+          <input value="{{ d.memo }}" onChange="{{ d.setMemo }}" placeholder="ひとことメモ（例：白湯を飲む）" style="width:100%;box-sizing:border-box;border:1px solid #D3DDCB;border-radius:14px;padding:10px 12px;font-family:inherit;font-size:14px;color:#574B47;background:#FBFCF9;outline-color:#55745D;font-size:13px">
+        </div>
+      </sc-for>
+    </section>
+
+    <button onClick="{{ openCard }}" style="min-height:58px;border-radius:999px;border:none;cursor:pointer;background:#2F4A3A;color:#F3EADC;font-size:16px;font-weight:700">スケジュール表をつくる 🐰</button>
+
+    <sc-if value="{{ showCard }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:6px 0 0;text-align:center;font-size:12px;color:#5A4E49">↓ この表をスクショして、専用LINEでシェアしよう！</p>
+      <section id="share-card" style="background:#FBFCF9;border-radius:28px;overflow:hidden;box-shadow:0 0 0 1px #C9A86A inset;animation:g-pop .5s cubic-bezier(.3,1.4,.5,1) both">
+        <div style="background:#F8ECEA;color:#574B47;padding:16px 18px;display:flex;flex-direction:column;gap:4px">
+          <span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:9px;letter-spacing:.3em">YURUFAS 7 DAYS</span>
+          <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:19px;line-height:1.4">{{ cardName }}さんの ヨハクをつくる7日間</span>
+          <span style="font-size:12px;line-height:1.6;padding:6px 10px;border-radius:12px;background:#FBFCF9">🎯 {{ cardGoal }}</span>
+          <sc-if value="{{ hasWants }}"><span style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px"><sc-for list="{{ cardWants }}" as="x"><span style="padding:2px 10px;border-radius:999px;background:rgba(251,252,249,.9);color:#2F4A3A;font-size:11px;font-weight:700;line-height:1.6">✨ {{ x.w }}</span></sc-for></span></sc-if>
+        </div>
+        <div style="padding:8px 14px 12px;display:flex;flex-direction:column">
+          <sc-for list="{{ pdays }}" as="d" hint-placeholder-count="7">
+            <div style="display:grid;grid-template-columns:48px 86px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px dashed #E3E8DE">
+              <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:15px;color:#2F4A3A">{{ d.label }}</span><span style="font-family:'Raleway',sans-serif;font-size:8.5px;letter-spacing:.15em;color:#5A4E49">{{ d.dow }}</span></span>
+              <span style="padding:3px 6px;border-radius:999px;font-size:11px;font-weight:700;text-align:center;white-space:nowrap;background:{{ d.patBg }};color:{{ d.patFg }}">{{ d.patLabel }}</span>
+              <span style="display:flex;flex-direction:column;min-width:0;line-height:1.4"><span style="font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ d.planShow }}</span><sc-if value="{{ d.hasMemo }}"><span style="font-size:10.5px;color:#5A4E49;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">✎ {{ d.memoShow }}</span></sc-if></span>
+            </div>
+          </sc-for>
+          <span style="margin-top:8px;align-self:flex-end;font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.2em;color:#5A4E49">KitoNe ／ ヨハクをつくる7日間</span>
+        </div>
+      </section>
+      <button onClick="{{ closeCard }}" style="align-self:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #B7C2AE;background:transparent;color:#2F4A3A;font-size:12px;font-weight:700;cursor:pointer">プランを直す</button>
+    </sc-if>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:640px;margin:0 auto;padding:0 16px 20px;box-sizing:border-box;display:flex;justify-content:center">
+      <button onClick="{{ goHome }}" style="display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;border:1.5px solid #2F4A3A;background:#FBFCF9;color:#2F4A3A;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(85,116,93,.12)" style-active="transform:scale(.97)">🏠 最初のページにもどる</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <section style="max-width:640px;margin:0 auto;padding:8px 16px 28px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+  <div style="border-radius:28px;overflow:hidden;background:#FBFCF9;box-shadow:0 0 0 1.5px #B7C2AE inset,0 8px 22px rgba(85,116,93,.12);display:flex;flex-direction:column;gap:12px;padding-bottom:16px">
+    <div>
+      <div style="height:16px;background:repeating-linear-gradient(90deg,#2F4A3A 0 24px,#FBFCF9 24px 48px);-webkit-mask:radial-gradient(circle 12px at 12px 4px,#000 98%,transparent) 0 0/24px 16px repeat-x;mask:radial-gradient(circle 12px at 12px 4px,#000 98%,transparent) 0 0/24px 16px repeat-x"></div>
+      <div style="padding:12px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center">
+        <span style="font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:.35em;color:#2F4A3A">USASHIHO SHOP</span>
+        <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:19px;color:#2F4A3A">🛒 今回使ったアイテム</span>
+        <span style="font-size:11.5px">7日間のあとも、続けたい方はこちらから</span>
+        <span style="margin-top:8px;padding:6px 14px;border-radius:12px;background:#F8ECEA;font-size:11.5px;font-weight:700;line-height:1.6;color:#574B47">🈹 今回のご参加者様限定で、特別なご案内もご用意しています。お楽しみに🐰</span>
+      </div>
+    </div>
+    <div style="padding:0 12px;display:flex;flex-direction:column;gap:12px">
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+      <a href="https://usashiho.shop/?pid=186771185" target="_blank" rel="noopener" style="position:relative;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#FBFCF9;box-shadow:0 4px 14px rgba(85,116,93,.14);text-decoration:none;color:#574B47" style-active="transform:scale(.97)"><span style="aspect-ratio:1/1;background:#E3E8DE;display:block;overflow:hidden"><img src="assets/mana.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></span><span style="padding:10px 10px 12px;display:flex;flex-direction:column;gap:6px"><strong style="font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:14px;line-height:1.4;color:#2F4A3A">MANA酵素</strong><span style="font-size:10.5px;line-height:1.5">ゆるファスの基本ドリンク</span><span style="margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;min-height:38px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:12px;font-weight:700">🛒 カートを見る</span></span></a>
+      <a href="https://usashiho.shop/?pid=190395910" target="_blank" rel="noopener" style="position:relative;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#FBFCF9;box-shadow:0 4px 14px rgba(85,116,93,.14);text-decoration:none;color:#574B47" style-active="transform:scale(.97)"><span style="aspect-ratio:1/1;background:#E3E8DE;display:block;overflow:hidden"><img src="assets/green-monster.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></span><span style="padding:10px 10px 12px;display:flex;flex-direction:column;gap:6px"><strong style="font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:14px;line-height:1.4;color:#2F4A3A">グリーンモンスター</strong><span style="font-size:10.5px;line-height:1.5">水にとかして飲む腸活ドリンク</span><span style="margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;min-height:38px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:12px;font-weight:700">🛒 カートを見る</span></span></a>
+    </div>
+    <div style="margin-top:6px;padding:16px 14px;border-radius:24px;background:#F6EFDF;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+        <span style="padding:2px 12px;border-radius:999px;background:#C9A86A;color:#FBFCF9;font-size:11px;font-weight:700">🔑 MEISTER ONLY</span>
+        <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:16px;line-height:1.5;color:#2F4A3A">マイスターになると、<span style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 40%;padding:0 2px">割引価格で購入可能！</span></span>
+        <span style="font-size:11.5px">マイスターの方は、こちらから専用価格で購入できます。</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+        <a href="https://usashiho.shop/?pid=188480732" target="_blank" rel="noopener" style="position:relative;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#FBFCF9;box-shadow:0 4px 14px rgba(85,116,93,.14);text-decoration:none;color:#574B47" style-active="transform:scale(.97)"><span style="aspect-ratio:1/1;background:#E3E8DE;display:block;overflow:hidden"><img src="assets/mana.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></span><span style="position:absolute;top:8px;left:8px;padding:1px 8px;border-radius:999px;background:#C9A86A;color:#FBFCF9;font-size:9.5px;font-weight:700">専用価格</span><span style="padding:10px 10px 12px;display:flex;flex-direction:column;gap:6px"><strong style="font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:14px;line-height:1.4;color:#2F4A3A">MANA酵素</strong><span style="font-size:10.5px;line-height:1.5">マイスター専用価格</span><span style="margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;min-height:38px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:12px;font-weight:700">🔑 専用価格で購入</span></span></a>
+        <a href="https://usashiho.shop/?pid=190396011" target="_blank" rel="noopener" style="position:relative;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#FBFCF9;box-shadow:0 4px 14px rgba(85,116,93,.14);text-decoration:none;color:#574B47" style-active="transform:scale(.97)"><span style="aspect-ratio:1/1;background:#E3E8DE;display:block;overflow:hidden"><img src="assets/green-monster.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></span><span style="position:absolute;top:8px;left:8px;padding:1px 8px;border-radius:999px;background:#C9A86A;color:#FBFCF9;font-size:9.5px;font-weight:700">専用価格</span><span style="padding:10px 10px 12px;display:flex;flex-direction:column;gap:6px"><strong style="font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:14px;line-height:1.4;color:#2F4A3A">グリーンモンスター</strong><span style="font-size:10.5px;line-height:1.5">マイスター専用価格</span><span style="margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;min-height:38px;border-radius:999px;background:#2F4A3A;color:#F3EADC;font-size:12px;font-weight:700">🔑 専用価格で購入</span></span></a>
+      </div>
+      <a href="https://1day.kitone.life/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;min-height:46px;padding:8px 14px;border-radius:999px;border:1.5px dashed #2F4A3A;text-decoration:none;color:#2F4A3A;font-size:12.5px;font-weight:700;text-align:center">1DAY講座を受けるとマイスターになれます！詳細はこちら →</a>
+    </div>
+    <a href="https://usashiho.shop/" target="_blank" rel="noopener" style="align-self:center;padding:6px 4px;font-size:12px;font-weight:700;color:#2F4A3A">うさしほショップをもっと見る →</a>
+  </div>
+  </div>
+  </section>
+  </sc-if>
+  <footer style="padding:24px 16px 32px;text-align:center;font-size:11px;color:#2F4A3A;background:#E3E8DE;display:flex;flex-direction:column;align-items:center;gap:8px"><span style="padding:4px 16px;border-radius:999px;background:#FBFCF9;color:#574B47;font-size:12px">📅 この専用サイトの閲覧期限は <strong style="font-weight:700">11/7（土）まで</strong> です</span><span>© KitoNe LLC.</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showReset&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;表示&quot;}}">
+const KEY = 'yurufas-guide-v1';
+const LINED = 'repeating-linear-gradient(#FBFCF9 0 27px,#EEF2EA 27px 28px)';
+const GRAPH = 'linear-gradient(#EEF2EA 1px,transparent 1px) 0 0/16px 16px,linear-gradient(90deg,#EEF2EA 1px,transparent 1px) 0 0/16px 16px,#FBFCF9';
+const LK = {
+  hero: { bg: 'radial-gradient(circle at 85% 20%,#FBFCF9 0 18%,transparent 19%),#E3E8DE', ill: '🌱', mk: '#FBFCF9', pBig: true },
+  note: { bg: LINED, tape: 'rgba(232,196,192,.85)', mk: '#E8C4C0', ring: '0 0 0 1px #D3DDCB inset' },
+  sticky: { bg: '#FBF3D9', rot: 'rotate(-1deg)', ill: '📌', mk: '#EBD9A8', ring: '0 6px 14px rgba(120,100,60,.12)', cols: 'repeat(auto-fit,minmax(150px,1fr))', card: '#FFFBEF' },
+  swap: { bg: '#F8ECEA', ill: '🔁', mk: '#FBFCF9', card: '#FBFCF9' },
+  water: { bg: 'linear-gradient(180deg,#EAF2EF,#FBFCF9)', ill: '💧', mk: '#CFE3DC', ring: '0 0 0 1px #CFE3DC inset' },
+  table: { bg: '#FBFCF9', ill: '🗂️', mk: '#C9D6C0', ring: '0 0 0 1.5px #B7C2AE inset', cols: 'repeat(auto-fit,minmax(150px,1fr))', card: '#EEF2EA', stack: true },
+  graph: { bg: GRAPH, tape: 'rgba(201,168,106,.55)', mk: '#EBD9A8', ring: '0 0 0 1px #D3DDCB inset' },
+  steps: { bg: '#2F4A3A', fg: '#F3EADC', ill: '👣', mk: '#55745D', card: 'rgba(251,252,249,.08)', big: true },
+  tips: { bg: '#EEF2EA', rot: 'rotate(.8deg)', ill: '🌿', mk: '#C9D6C0', ring: '0 6px 14px rgba(85,116,93,.12)' },
+  heart: { bg: '#F8ECEA', ill: '💗', mk: '#FBFCF9', cols: 'repeat(auto-fit,minmax(150px,1fr))', card: '#FBFCF9', stack: true },
+  cal: { bg: LINED, ill: '📅', mk: '#E8C4C0', ring: '0 0 0 1px #D3DDCB inset' }
+};
+const YF_LOOK = ['hero', 'note', 'sticky', 'swap', 'water', 'table', 'graph', 'steps', 'tips', 'heart', 'cal'];
+const RP_KEY = 'yurufas-report-v1';
+const RP_MODES = [{ v: 'easy', icon: '🐢', name: 'かんたん', desc: '時間がないときはコレ！', time: '30秒' }, { v: 'normal', icon: '🐈', name: 'ふつう', desc: '基本をバランスよく', time: '1分' }, { v: 'full', icon: '🐰', name: 'じっくり', desc: '全部ていねいにふりかえる', time: '2分' }];
+const RP_F = [
+  { k: 'name', m: 0, kind: 'text', r: 'ニックネーム', label: 'ニックネーム', ph: '例：しほ', short: true },
+  { k: 'pat', m: 0, kind: 'one', r: '過ごし方', label: '今日の過ごし方は？🗓️', o: ['🌞 朝ファス', '🍱 昼ファス', '🌙 夜ファス', '🍪 おやつ置き換え', '🥤 ドリンクだけ', '🍽️ ふだん通り'] },
+  { k: 'drink', m: 1, kind: 'multi', r: '取り入れたもの', label: '取り入れたもの🥤', o: ['MANA酵素', 'グリーンモンスター'] },
+  { k: 'mago', m: 1, kind: 'multi', r: 'まごはやさしいわ', label: 'まごはやさしいわ🥢（食べたものを選んでね）', o: ['ま：豆類', 'ご：ごま・ナッツ', 'は：発酵食品', 'や：野菜', 'さ：魚', 'し：きのこ類', 'い：いも類', 'わ：わかめ・海藻'] },
+  { k: 'breakfast', m: 2, kind: 'text', r: '朝食', label: '朝食（任意）', ph: '例：味噌汁、納豆', short: true },
+  { k: 'lunch', m: 2, kind: 'text', r: '昼食', label: '昼食（任意）', ph: '例：そば', short: true },
+  { k: 'dinner', m: 2, kind: 'text', r: '夕食', label: '夕食（任意）', ph: '例：野菜スープ', short: true },
+  { k: 'snack', m: 2, kind: 'text', r: '間食', label: '間食は？🍪（任意）', ph: '例：ナッツ少し（なければ「なし」）', short: true },
+  { k: 'chew', m: 1, kind: 'one', r: '噛むこと', label: 'よく噛めた？😋', o: ['✨ よく噛めた', '😌 まあまあ', '😅 急いで食べちゃった'] },
+  { k: 'poop', m: 0, kind: 'one', r: 'お通じ', label: '今日のお通じは？💩', o: ['🪨 ひび割れ（硬い）', '🥖 固め', '🍌 バナナ（理想！）', '🍦 柔らかめ', '💧 水っぽい', '🚫 出なかった'] },
+  { k: 'poopN', m: 1, kind: 'one', r: '回数・量', label: '回数と量は？', o: ['🤏 1回・少なめ', '👌 1回・普通', '🙌 1回・たっぷり', '✌️ 2回以上'] },
+  { k: 'water', m: 0, kind: 'one', r: '水分', label: '水分・白湯は？💧', o: ['🫧 たっぷり（1.5L以上）', '💧 ふつう（1〜1.5L）', '🤏 少なめ（1L未満）'] },
+  { k: 'sleep', m: 2, kind: 'one', r: '睡眠', label: '昨日の睡眠は？🌙', o: ['🌙 ぐっすり眠れた', '😌 まあまあ', '😴 浅い・途中で起きた', '🥺 ほとんど眠れなかった'] },
+  { k: 'temp', m: 2, kind: 'one', r: '冷え', label: 'からだの冷え・温かさ🌡️', o: ['🥶 冷えてる', '😌 ふつう', '🌞 ぽかぽか'] },
+  { k: 'swell', m: 2, kind: 'one', r: 'むくみ', label: 'むくみは？', o: ['✨ なし', '😌 少しある', '😅 むくんでる'] },
+  { k: 'stomach', m: 1, kind: 'one', r: 'お腹', label: 'お腹の調子は？', o: ['😣 張ってる・痛い', '🤔 ちょっと重い', '😌 ふつう', '☺️ 調子いい', '✨ めっちゃ快調！'] },
+  { k: 'body', m: 1, kind: 'one', r: '体調', label: '体調は？', o: ['😴 だるい・疲れた', '🥲 ちょっと不調', '😌 ふつう', '☺️ 元気', '🤗 軽い！調子いい！'] },
+  { k: 'skin', m: 2, kind: 'one', r: '肌', label: '肌の調子は？', o: ['😣 荒れてる・乾燥', '🤔 いつも通り', '☺️ いい感じ', '✨ ツヤツヤ！'] },
+  { k: 'move', m: 2, kind: 'multi', r: '運動', label: '今日の運動💪', o: ['👟 散歩', '🧘 ヨガ', '🌿 軽い運動', '🛋️ お休み'] },
+  { k: 'mood', m: 0, kind: 'one', r: '気分', label: '今日の気分は？🌿', o: ['🥺 モヤモヤ', '😌 ふつう', '☺️ 穏やか', '✨ 満たされてる'] },
+  { k: 'heart', m: 2, kind: 'text', r: '心の声🕯️', label: '心の声🕯️（今日のテーマで感じたこと）', ph: '例：我慢していた気持ちに気づけた' },
+  { k: 'care', m: 2, kind: 'multi', r: 'セルフケア', label: 'セルフケア✨', o: ['🛁 お風呂', '💆 マッサージ', '✨ スキンケア', '🧘 瞑想', '🌿 ストレッチ', '🫁 深呼吸', '🙅 特になし'] },
+  { k: 'change', m: 2, kind: 'text', r: 'からだの変化・気づき✨', label: 'からだの変化・気づき✨', ph: '例：肌がすべすべ、むくみが減った' },
+  { k: 'happy', m: 0, kind: 'text', r: 'ハッピーシェア💌', label: 'ハッピーシェア💌（小さなうれしかったこと）', ph: '例：朝日がきれいだった' }
+];
+const BC_KEY = 'yurufas-check-v1';
+const BCQ = [
+  { c: 0, q: '便通の頻度は？', o: [['毎日スッキリ出る', 4], ['2〜3日に1回', 2], ['4日以上出ないことが多い', 1], ['毎日出るけどスッキリしない', 1]] },
+  { c: 0, q: '便の状態は？', o: [['バナナ状で適度なかたさ', 4], ['コロコロかたい', 1], ['やわらかすぎる・下痢ぎみ', 1], ['日によってバラバラ', 2]] },
+  { c: 0, q: 'お腹の張りや不快感は？', o: [['ほとんどない', 4], ['たまにある', 2], ['よくある', 1]] },
+  { c: 1, q: '発酵食品（納豆・味噌・ぬか漬け・麹調味料など）を食べる頻度は？', o: [['ほぼ毎日', 3], ['週3〜4回', 2], ['週1〜2回以下', 1]] },
+  { c: 1, q: '食物繊維（野菜・きのこ・海藻・豆など）をとる頻度は？', o: [['毎食意識してとる', 3], ['1日1〜2回はとる', 2], ['週に数回くらい', 1], ['ほとんどとらない', 0]] },
+  { c: 1, q: '食事の量は？', o: [['腹八分目くらい', 3], ['ちょうど満腹くらい', 2], ['満腹以上に食べがち', 1]] },
+  { c: 1, q: '食事中、よく噛んでる？', o: [['意識してよく噛んでる', 3], ['ふつうかも', 2], ['早食いしがち', 1], ['ながら食べしがち', 1]] },
+  { c: 1, q: '晩ごはんは、寝る何時間前に食べ終わる？', o: [['3時間以上前', 3], ['2時間くらい前', 2], ['寝る直前のことが多い', 1]] },
+  { c: 1, q: '外食・コンビニ・加工食品の頻度は？', o: [['週1回以下', 3], ['週2〜4回', 2], ['ほぼ毎日', 1]] },
+  { c: 1, q: '「まごはやさしいわ」の食材、1日にいくつとれてる？', o: [['6つ以上', 3], ['3〜5つ', 2], ['2つ以下', 1]] },
+  { c: 1, q: '主食に、雑穀や分づき米・玄米を取り入れている？', o: [['よく取り入れている', 3], ['ときどき', 2], ['白米やパンだけ', 1]] },
+  { c: 1, q: 'お菓子や甘い飲み物は？', o: [['ほとんどとらない', 3], ['1日1回くらい', 2], ['ないとやってられない', 1]] },
+  { c: 1, q: 'お腹がすきすぎて、つい買いすぎ・食べすぎることは？', o: [['ほとんどない', 3], ['ときどきある', 2], ['よくある', 1]] },
+  { c: 2, q: 'コーヒーなどカフェインの量は？', o: [['ほとんどとらない', 3], ['1日1〜2杯', 2], ['ないとやってられない', 1]] },
+  { c: 4, q: '醤油・味噌・塩などの調味料、原材料を見て選んでいる？', o: [['こだわって選んでいる', 3], ['なんとなく', 2], ['気にしたことがない', 1]] },
+  { c: 4, q: '料理やおやつの甘み（砂糖・甘味料）は？', o: [['てんさい糖・黒糖・メープルシロップ・米飴・本みりんなどを選んでいる', 3], ['特に気にしていない', 2], ['カロリーゼロ・人工甘味料入りが多い', 1]] },
+  { c: 4, q: '食品を買うとき、裏の原材料表示を見る？', o: [['ほぼ毎回見る', 3], ['ときどき見る', 2], ['見たことがない', 1]] },
+  { c: 2, q: '水分摂取量は？（1日・お茶やコーヒー以外）', o: [['1.5L以上', 3], ['1Lくらい', 2], ['1L以下', 1]] },
+  { c: 2, q: '睡眠は？', o: [['8時間以上たっぷり', 3], ['6〜8時間でぐっすり', 3], ['短いけど眠れている', 2], ['寝不足・眠りが浅い', 1]] },
+  { c: 2, q: 'カラダを動かす習慣は？', o: [['週3回以上', 3], ['週1〜2回', 2], ['ほとんど動かない', 1]] },
+  { c: 2, q: '1日の中で、ほっとひと息つく時間は？', o: [['毎日ある', 3], ['ときどきある', 2], ['ほとんどない', 1]] },
+  { c: 3, q: '肌の調子は？', o: [['ピカピカのツルツル✨', 3], ['いい感じ', 2], ['まあまあ', 1], ['荒れやすい・くすみが気になる', 0]] },
+  { c: 3, q: '疲れやすさは？', o: [['✨疲れにくくて元気！', 2], ['ふつう', 1], ['すぐ疲れる・だるい', 0]] },
+  { c: 3, q: 'カラダの冷えは？', o: [['感じない', 2], ['たまに冷える', 1], ['いつも冷えている', 0]] },
+  { c: 3, q: 'ストレスや気分の浮き沈みは？', o: [['安定している', 2], ['たまに落ちこむ', 1], ['よく落ちこむ・イライラする', 0]] }
+];
+const BCC = [{ icon: '🌱', name: 'お通じ' }, { icon: '🍽️', name: '食生活' }, { icon: '🌙', name: '暮らし' }, { icon: '🌸', name: '心とカラダ' }, { icon: '🛒', name: 'えらぶ力' }];
+const BCMAX = [0, 1, 2, 3, 4].map(c => BCQ.filter(q => q.c === c).reduce((s, q) => s + Math.max(...q.o.map(o => o[1])), 0));
+const BCTOTAL = BCMAX.reduce((a, b) => a + b, 0);
+const BCLV = [[87, '🌳', 'とても整ってる', 'いい習慣が身についています。この調子で、ゆるっとキープ。'], [75, '🌿', '整ってきてる', 'いい感じ！気になる項目をひとつだけ意識してみよう。'], [62, '🍀', 'まずまず', '伸びしろたっぷり。7日間でどこが変わるか楽しみに。'], [46, '🌱', 'ゆらぎぎみ', 'カラダが少しお疲れかも。できることから、ひとつずつ。'], [0, '🌰', 'お疲れぎみ', 'がんばってきた証拠かも。この7日間で、ヨハクをつくってあげよう。']];
+
+const SEASON = [{"k":"し","key":"salt","name":"塩","ok":"原材料：海水（国産）\n工程：天日、平釜","ng":"原材料：塩化ナトリウム99%以上\n工程：イオン膜、立釜","how":[["◎","天日・平釜","海水を太陽や平釜でじっくり。ミネラルが残ります"],["△","イオン膜・立釜","電気で塩化ナトリウムだけを取り出す精製塩"],["△","溶解・再結晶","輸入塩を溶かして固め直した再加工塩"]],"price":"精製塩 1kg 100〜200円 ／ 自然塩 500g 500〜1,500円","why":"海水を何日もかけて煮詰めたり、天日で干したり。手間と時間がかかるから、そのぶんの値段なんです。"},{"k":"せ","key":"soy","name":"醤油","ok":"大豆（国産）、小麦（国産）、食塩","ng":"脱脂加工大豆、小麦、食塩、ぶどう糖果糖液糖、アミノ酸液／調味料（アミノ酸等）、カラメル色素、甘味料","price":"安価なもの 1L 200〜300円 ／ 天然醸造 500ml 600〜1,200円","why":"天然醸造は、木桶で1〜2年じっくり寝かせます。安いものは温度をかけて数か月で仕上げ、足りない旨みを調味料で足しています。"},{"k":"そ","key":"miso","name":"味噌","ok":"大豆、米、食塩（「生」表示）","ng":"大豆、米、食塩、酒精／調味料（アミノ酸等）","price":"安価なもの 1kg 300〜500円 ／ 天然醸造 1kg 1,000〜2,000円","why":"季節をまたいでゆっくり発酵させるのが天然醸造。速醸は温度管理で短期間に仕上げ、酒精で発酵を止めることもあります。"},{"k":"す","key":"vinegar","name":"酢","ok":"米（国産）\n（純米酢・玄米酢・りんご酢など）","ng":"醸造アルコール、米、酒かす、果糖ぶどう糖液糖","price":"安価なもの 500ml 100〜200円 ／ 純米酢 500ml 400〜1,000円","why":"お米からお酒をつくり、それをお酢に。2段階の発酵が必要です。安いものはアルコールから短期間でつくられます。"},{"k":"さ","key":"sugar","name":"砂糖","ok":"さとうきび（国産）／てんさい\n（きび砂糖・黒糖・てんさい糖）","ng":"上白糖・グラニュー糖\n（精製の工程でミネラルが取り除かれたもの）","price":"上白糖 1kg 200〜300円 ／ きび砂糖・てんさい糖 500g〜1kg 300〜700円","why":"精製するほど白く、さらさらに。そのぶん、もともとのミネラルは取り除かれていきます。"},{"k":"み","key":"mirin","name":"みりん","ok":"もち米、米こうじ、本格焼酎（米焼酎）","ng":"水あめ、米・米こうじの醸造調味料、醸造酢／酸味料、調味料（アミノ酸等）\n（「みりん風調味料」）","price":"みりん風 1L 200円台 ／ 本みりん（伝統製法）500ml 700〜1,500円","why":"もち米と米麹を焼酎に漬けて、1年ほど熟成。みりん風調味料は、糖類や調味料で味を似せたものです。"},{"k":"油","key":"oil","name":"油","ok":"食用なたね油（国産）\n製法：一番搾り・低温圧搾\n／ エキストラバージンオリーブオイル（コールドプレス・有機）","ng":"食用植物油脂（製法の表示なし）\n／ 高温・溶剤で抽出して精製したもの","price":"サラダ油 1L 300〜400円 ／ 低温圧搾なたね油 450〜600g 800〜1,500円 ／ EXVオリーブ 500ml 1,000〜2,500円","why":"低温圧搾は、熱をかけずにゆっくり搾るので、とれる量が少なく手間もかかります。安いものは高温や溶剤でたくさん抽出してから精製しています。","memo":"うさしほは「一番搾り・低温圧搾の菜種油」を愛用中。オリーブオイルはコールドプレスの、できればオーガニックのものがおすすめです。"},{"k":"だ","key":"dashi","name":"だし","ok":"昆布、かつお節、干し椎茸、煮干し\n（素材そのもの、または素材だけの粉末）","ng":"食塩、砂糖類、風味原料、酵母エキス、たんぱく加水分解物／調味料（アミノ酸等）","price":"顆粒だし 1袋 200〜400円 ／ 昆布・かつお節 各100g 500〜1,500円","why":"素材からとるだしは、香りもうま味も本物。顆粒だしは、エキスや調味料でその味を再現しています。","memo":"「酵母エキス」「◯◯エキス」と書かれたものも要注意。添加物の表示には出ませんが、うま味を足すための原料です。"}];
+
+const SHORT = s => s.length > 9 ? s.slice(0, 9) + '…' : s;
+const CH = [
+  { id: 'intro', no: '00', icon: '🐰', en: 'START HERE', title: 'このガイドとの付き合い方',
+    lead: 'ここに書いてあるのは、うさしほのこれまでの学びや経験をもとにまとめた「一般的な考え方」です。あなた専用のパーソナルな内容ではありません。',
+    sections: [
+      { h: '大切にしてほしいこと', items: [
+        { k: '1', h: '全部クリアしなくていい', t: 'チェックが全部ついたら正解、ではありません。ひとつでも「これいいかも」が見つかれば十分です。' },
+        { k: '2', h: '鵜呑みにしない', t: '体質も、生活も、今の体調も人それぞれ。誰かの正解が、あなたの正解とは限りません。' },
+        { k: '3', h: '自分で試して、見極める', t: '気になったものを7日間で試してみる。カラダの反応を観察して、合う・合わないを自分で決めるのがいちばん大切です。' },
+        { k: '4', h: 'あえて逆を試すのもアリ', t: 'いつもと違う選択をしてみると、自分に合うものが見えてきます。' } ] }
+    ],
+    note: '各章の「MY BODY NOTE」で、やってみたカラダの感じを記録できます。「合わなかった」も立派な発見だよ。',
+    challenge: '気になる章をひとつ選んで、今日読んでみる' },
+  { id: 'yurufas', no: 'YF', icon: '🔰', en: 'GENTLE FOOD GUIDE', title: '食生活をゆるっと整える基本', changesList: true,
+    lead: '半日ファスティング・プチ断食のやり方。「いきなり3日間は不安…」という方も、まずはここから。難しく考えず、気軽にスタートしてみよう💨 ファスティングをしなくても、毎日1杯の酵素ドリンクだけでもOKです。',
+    sections: [
+      { h: 'この7日間の食の整え方', p: '食べないことを頑張るのではなく、普段の食生活を見直して、カラダとココロにヨハク（余白）をつくること。日常に自然に取り入れられる「プチ腸活習慣」です。', items: [] },
+      { h: 'この整え方のいいところ', items: [
+        { k: '◎', h: '栄養を食事で補いながら、無理なくできる', t: '何も食べないのではなく、ドリンクや食事で必要な栄養素を補いながら進めるので、仕事や家事を続けながらでも取り組めます。' },
+        { k: '◎', h: '1日1杯のドリンクだけでもOK', t: 'うさしほがお伝えしている食の整え方は、ファスティングの要素を取り入れなくても、毎日1杯酵素ドリンクを飲むだけでもいいと思っています。厳密にはファスティングではないけれど、この7日間の過ごし方としてOKにしています🐰' } ] },
+      { h: 'こんな人にぴったり！', items: [
+        { k: '✓', h: '長いファスティングは難しい・不安', t: '' }, { k: '✓', h: '仕事柄、食事を抜けない（給食があるなど）', t: '' },
+        { k: '✓', h: 'わかっちゃいるけど食べたい（あるある！）', t: '' }, { k: '✓', h: '食べながらリセットしたい・日常的に取り組みたい', t: 'まずは1食を、ゆるぅくファスティングしてみよう🌸' } ] },
+      { h: 'ただ抜くだけじゃダメ！必ず「置き換える」', p: '食事を抜いて、反動で食べすぎたことはありませんか？「我慢して抜く」のではなく、ドリンク（MANA酵素）に置き換えるのが鉄則です。', items: [
+        { k: '1', h: '1食置き換え', t: '朝 or 夜の1食をドリンクに。' }, { k: '2', h: '2食置き換え', t: '1日1食にする。' }, { k: '3', h: '1日断食（経験者向け）', t: '今回のプログラムは、1日断食を積極的におすすめするものではありません。', w: 'ファスティングをまだ学んでいない方は、1日断食より「1食・2食の置き換え」か「おやつの代わりに飲む」がおすすめ' },
+        { k: '◎', h: 'まずは「おやつの代わりに飲む」からでもOK', t: 'おやつの代わりに15mlほど取り入れるだけでも、立派な食の整え方です。' },
+        { k: '◎', h: '自由に組み合わせてOK', t: '半日から始めて、慣れてきたら1日、2日と少しずつ。「もっと変化を感じたい」と思ったら、ガチファス（3日間〜）にステップアップ🌿' } ] },
+      { h: 'スペシャルアイテム（ドリンク）の飲み方', p: 'いちばんのポイントは「食べない時間」をがんばることではなく「ドリンクをちゃんと飲むこと」。', items: [
+        { k: '1', h: '1食置き換え｜MANA酵素 40〜50ml', t: '6倍以上の水で割って。' },
+        { k: '2', h: '2食置き換え｜MANA酵素 80〜100ml', t: '6倍以上の水で割って。' },
+        { k: '3', h: '1日断食｜MANA酵素 300ml（経験者向け）', t: '良質な水2L以上と一緒に。まだ学んでいない方は①②がおすすめ。' },
+        { k: '◎', h: '飲み方のPOINT', t: 'ちびちび飲む（15分おきだと安心）／一気飲みせず3回以上に分ける／上記は最低量なので増やしてOK／おやつの代わりに15mlほど取り入れるのもOK。' },
+        { k: '!', h: '運動量が多い人・体格が大きい人・男性は', t: 'これより多めに補給してOK。不安な方はお聞きください。' } ] },
+      { h: '場面別・飲み方早見表', items: [
+        { k: '準', h: '準備期間', t: '酵素ドリンク15〜30mlを5〜6倍の水で割って。準備期間から飲みはじめるのがおすすめ。' },
+        { k: '断', h: '断食期間', t: '15分に1回が安心、せめて1時間に1回。2時間あくと低血糖のリスクに。アミノマキア・ビタミンC・塩・梅干しはOK。', w: '2時間以上あけると低血糖のリスク' },
+        { k: '回', h: '回復期間', t: 'すっきり大根を食べたら、1時間以内に酵素ドリンクを20〜30ml。回復期間中もちびちび飲むと、効果の持続とリバウンド防止に。' } ] },
+      { h: '飲むときの共通ルール', items: [
+        { k: '薄', h: '薄めて、ちびちびが基本', t: '原液で一気に飲まない。' },
+        { k: '塩', h: '頭痛が起きたら', t: 'ブラックソルトや天然塩を少々。' },
+        { k: '!', h: '低血糖の症状が出たら', t: '酵素ドリンクの原液を少し、またはりんごなど消化のいい果物を少量。', w: 'めまい・冷や汗・手のふるえは低血糖のサイン' },
+        { k: '📦', h: 'ドリンクが足りるか事前チェック', t: '足りないと思ったら早めにうさしほにLINEを。最短翌日にお届けできる場合も。延長したくなったときのために、少し余裕をもって。' } ] },
+      { h: '基本のやり方（3ステップ）', items: [
+        { k: '1', h: '前日の夕食は20時までに', t: '消化のいいものを腹八分目で。「まごはやさしいわ」を意識できるとなおGOOD。揚げ物・脂っこいもの・お菓子・アルコールは控えめに。' },
+        { k: '2', h: '食事を抜く時間は、ドリンクに置き換える', t: '目安量のMANA酵素をちびちび。水・白湯・ノンカフェインのハーブティーもこまめに。' },
+        { k: '3', h: '再開は「まごはやさしいわ」の食事から', t: 'いきなり普段通りに戻さず、玄米粥・具だくさん味噌汁・蒸し野菜など、胃腸にやさしいものから少しずつ。' } ] },
+      { h: '過ごし方のコツ', items: [
+        { k: '歩', h: '軽い運動はOK', t: '散歩や軽いヨガなど。激しい運動は避けよう。' },
+        { k: '湯', h: '空腹感が強いときは', t: 'ぬるま湯やハーブティーでお腹をふくらませる。少量の梅干しや天然塩をなめるのもOK。' },
+        { k: '眠', h: '良質な睡眠をしっかり', t: '' } ] },
+      { h: '心が揺れたときの対処法', p: '「揺れるのが普通」と思えると、気持ちがラクになるよ。', items: [
+        { k: '1', h: 'ドリンクを飲む', t: '' }, { k: '2', h: '塩をなめる', t: '' }, { k: '3', h: '動画を見て気をまぎらわせる', t: '' }, { k: '4', h: '寝る', t: '' } ] },
+      { h: '頻度の目安', items: [
+        { k: '◎', h: '1〜2週間に1回のペースがおすすめ', t: '生活リズムに組み込みやすく、続けやすいのが魅力。朝だけ・夜だけのプチ糖質オフと組み合わせるのもいい（糖質制限は推奨していません）。' } ] }
+    ],
+    note: '食を整えることは、我慢大会じゃなくて「自分を労わる時間」。うまくいかない日があっても大丈夫。「今日はドリンクを意識できた」それだけで十分な一歩です。「これで合ってるかな？」と不安になったら、量を守ることよりも、こまめに飲むことを優先してね🌿',
+    challenge: '「わたしの7日間プラン」をつくって、専用LINEでシェアしてみる' },
+  { id: 'seasoning', no: '01', icon: '🧂', en: 'SEASONINGS', title: '調味料の選び方（さしすせそ）', season: true,
+    lead: '毎日使う調味料は、少しずつでもカラダに入るもの。おうちの調味料の「原材料」を見て、チェックしてみよう。',
+    sections: [],
+    note: 'こだわって作られた調味料は、安いものの数倍することも。でも「なんでこんなに安いの？」と考えてみると、作られる過程が見えてきます。安いものばかりが出回ると、日本の古き良き伝統や発酵調味料の作り手がどんどん減ってしまう。背景を知って、こだわって作られたものを、みんなで選んでいけたらうれしいです。全部を一気に替えなくて大丈夫。なくなったものから、ひとつずつ。',
+    challenge: 'おうちの調味料の原材料を見て、チェックをつけてみる' },
+  { id: 'sweet', no: '02', icon: '🍯', en: 'SWEETENERS', title: '甘味料の選び方',
+    lead: '甘いものを我慢するより、「何で甘みをつけるか」を選ぶほうが続けやすいです。',
+    sections: [
+      { h: 'おすすめの甘味料', items: [
+        { k: '◎', h: '米飴・甘酒', t: 'お米由来のやさしい甘さ。甘酒は米麹からつくるノンアルコールのものを。' },
+        { k: '◎', h: 'メープルシロップ', t: '純度100%のものを。「メープル風シロップ」に注意。' },
+        { k: '○', h: 'てんさい糖・きび砂糖・黒糖', t: '料理やお菓子に使いやすい、ミネラルの残った砂糖。' },
+        { k: '○', h: 'はちみつ', t: '加熱していない純粋はちみつを。1歳未満の赤ちゃんには与えないでください。' },
+        { k: '○', h: 'ココナッツシュガー・羅漢果', t: 'コクのある甘み。羅漢果の甘味料は、ほかに何が入っているかも確認を。' } ] },
+      { h: 'できれば控えたい', items: [
+        { k: '△', h: '果糖ぶどう糖液糖', t: '清涼飲料水や加工食品によく入っています。原材料表示でチェック。' },
+        { k: '△', h: '人工甘味料', t: 'アスパルテーム・アセスルファムK・スクラロースなど。「カロリーゼロ」の飲み物に多いです。' } ] }
+    ],
+    column: { title: '人工甘味料のはなし', lead: '「カロリーゼロ」「糖類ゼロ」の飲み物やお菓子に多く使われている甘味料です。国の基準の中では使ってよいとされていますが、知っておきたいことがあります。',
+      items: [['アスパルテーム', '砂糖の約200倍'], ['アセスルファムK', '砂糖の約200倍'], ['スクラロース', '砂糖の約600倍'], ['サッカリン', '砂糖の約300〜500倍'], ['ネオテーム', '砂糖の約7,000〜13,000倍'], ['アドバンテーム', '砂糖の約14,000〜48,000倍']],
+      why: [['舌', '甘さに慣れてしまう', '砂糖の何百倍もの甘さに慣れると、素材の自然な甘みを感じにくくなり、もっと甘いものが欲しくなりやすいと言われています。'], ['腸', '腸内環境への影響', '腸内細菌のバランスに影響する可能性が、研究で報告されています。'], ['脳', '食欲のコントロール', '甘いのにエネルギーが入ってこないことで、かえって食欲が乱れるという考え方もあります。'], ['WHO', '体重管理には勧めない', 'WHOは2023年、体重管理のために砂糖以外の甘味料を使うことを勧めない、という指針を出しました。']],
+      where: 'カロリーゼロ・糖類ゼロの飲み物、ガム、のど飴、プロテイン、ゼリー、ドレッシング、お菓子など',
+      memo: '「ゼロ」と書いてあったら、原材料の「／」のあとをチェック。たまに飲むくらいで神経質になる必要はないけれど、毎日の習慣になっていたら見直してみてね。' },
+    note: 'カラダにやさしい甘味料でも、とりすぎれば糖は糖。「量」と「質」の両方を意識してみてね。',
+    challenge: 'いつもの甘みを、甘酒かメープルに替えてみる' },
+  { id: 'magoha', no: '03', icon: '🥢', en: 'MAGOHAYASASHIIWA', title: 'まごはやさしいわ',
+    lead: '和の食材の頭文字をとった合言葉。献立に迷ったら、足りないものを1つ足すだけでOKです。',
+    sections: [
+      { h: '9つの合言葉と、使いやすい食材', items: [
+        { k: 'ま', h: '豆類', t: '納豆・豆腐・油揚げ・厚揚げ・高野豆腐・おから・きな粉・豆乳・ひよこ豆・小豆。→ 味噌汁に油揚げ、サラダにひよこ豆、朝は納豆。' },
+        { k: 'ご', h: 'ごま（種実類）', t: 'すりごま・練りごま・くるみ・アーモンド・かぼちゃの種。→ ごはんやおひたしに、すりごまをひとふり。' },
+        { k: 'は', h: '発酵食品', t: '味噌・ぬか漬け・納豆・甘酒・塩麹・醤油麹・キムチ・天然酵母のパン。→ 塩麹でお肉や魚を漬けるだけ。' },
+        { k: 'や', h: '野菜', t: '生野菜と加熱した野菜のバランスは、体質や季節に合わせて。冷えやすい人・お腹がゆるくなりやすい人は加熱を多めに。大根・にんじん・ごぼう・れんこんなどの根菜、小松菜・ほうれん草などの青菜、玉ねぎ・キャベツ、旬の野菜。→ 根菜たっぷりの味噌汁がいちばん手軽。' },
+        { k: 'さ', h: '魚', t: 'いわし・あじ・さば・さんま・ししゃも・しらす・ちりめんじゃこ・煮干し・かれい。→ 焼き魚、じゃこごはん、さば缶もおすすめ。' },
+        { k: 'し', h: 'しいたけ（きのこ類）', t: 'しいたけ・干し椎茸・しめじ・えのき・まいたけ・なめこ・きくらげ。→ 何種類か合わせて、炒め物や汁物に。' },
+        { k: 'い', h: 'いも類', t: '山いも・里いも・こんにゃく・さつまいもがおすすめ。じゃがいもは血糖値が上がりやすいので、食べすぎに注意。→ ふかし芋や、汁物の具に。' },
+        { k: 'わ', h: 'わかめ（海藻類）', t: 'わかめ・ひじき・昆布・のり・もずく・めかぶ・寒天。→ 味噌汁にわかめ、おにぎりにのり、もずく酢を1品。' } ] },
+      { h: '魚・卵を選ぶときのポイント', p: 'おすすめは、体長30cm以下の小さな魚。切り身よりも、スーパーで「1尾まるごと」売られているようなイメージです。', items: [
+        { k: '◎', h: '小さな魚・青魚', t: 'いわし・あじ・さんま・さば・ししゃも・しらすなど。骨ごと食べられる小魚もおすすめです。' },
+        { k: '△', h: '大きな魚はほどほどに', t: 'まぐろ・かじき・きんめだいなど、食物連鎖の上にいる大きな魚は、水銀などの重金属がたまりやすいと言われています。頭痛やだるさなど、体調に影響すると考える人も。あまり頻繁には食べすぎないのがおすすめです。' },
+        { k: '卵', h: '卵は「選び方」にこだわって', t: '卵は完全栄養食とも言われるほど、栄養がぎゅっと詰まった食材。動物性たんぱく質は、お肉以外の魚や卵がおすすめです。卵は、餌や飼育環境にこだわっているものを選んでみて。「平飼い」「飼料へのこだわり」などがパッケージに書かれているものが目安です。スーパー「LIFE」のBIO-RAL（ビオラル）シリーズの「やさしい平飼いたまご」なども、比較的手に入りやすいです。' },
+        { k: '断', h: 'ガチな断食の前後は控えめに', t: '準備期間・回復期間は、消化にやさしい植物性の食事を中心にしよう。' },
+        { k: '!', h: '妊娠中の方は特に', t: '大きな魚の食べる量には、国の目安があります。気になる方は主治医にご相談ください。' } ] }
+    ],
+    note: '毎食ぜんぶそろえなくて大丈夫。1日のどこかで、いくつ入ったかな？くらいの気持ちで。この期間は、その食材がどんなふうに育ち、つくられてきたのかという背景にも目を向けて、感謝の気持ちを忘れずにいただきましょう。日本やアジアの海は水銀が多いとも言われるので、魚は「小さいものを、まるごと」を合言葉に。',
+    challenge: '今日の食事に「まごはやさしいわ」がいくつ入ったか数えてみる' },
+  { id: 'ferment', no: '12', icon: '🫙', en: 'FERMENTATION', title: '発酵のある暮らし',
+    lead: '発酵食品は、意識しないとなかなかとれないもの。でも意識してみると、じつは毎日の食卓に身近にあふれています。',
+    sections: [
+      { h: '身近な発酵食品', items: [
+        { k: '味', h: '味噌', t: '大豆・米（麦）麹・塩だけでつくられた、加熱殺菌していないものを。毎日のお味噌汁がいちばん手軽です。' },
+        { k: 'せ', h: '醤油', t: '原材料が「大豆・小麦・食塩」の本醸造・天然醸造のもの。' },
+        { k: 'ぬ', h: 'ぬか漬け', t: '野菜を漬けるだけ。市販のぬか床も便利です。' },
+        { k: '納', h: '納豆', t: '朝ごはんにも、お昼のあと一品にも。' },
+        { k: '麹', h: '麹調味料（塩麹・醤油麹）', t: '塩や醤油のかわりに使うだけで、うま味がアップ。' },
+        { k: '甘', h: '甘酒（米麹）', t: '米麹からつくるノンアルコールのもの。やさしい甘みで、おやつ代わりにも。' },
+        { k: '酢', h: '酢・本みりん', t: 'じつはこれも発酵調味料。' },
+        { k: '他', h: 'キムチ・ザワークラウト・チーズなど', t: '世界にもいろいろな発酵食品があります。' } ] },
+      { h: 'とり入れるコツ', items: [
+        { k: '1', h: '1日1回、どこかで発酵食品を', t: 'お味噌汁、納豆、ぬか漬けのどれか1つでもOK。' },
+        { k: '2', h: 'いろいろな種類を少しずつ', t: '1つを大量にとるより、いろいろな発酵食品を少しずつがおすすめです。' },
+        { k: '3', h: '味噌は沸騰させない', t: 'お味噌汁は、火を止めてから味噌をとくと香りもよく仕上がります。' } ] },
+      { h: '基本の塩麹', p: '材料：米麹（乾燥）200g、塩60g、水250ml前後（生麹の場合は水200ml前後）', items: [
+        { k: '1', h: '麹をほぐして塩を混ぜる', t: '清潔なボウルで、麹をパラパラにほぐし、塩をまんべんなく混ぜます。' },
+        { k: '2', h: '水を加える', t: '麹がひたひたにかぶるくらいまで水を加えて混ぜ、清潔な保存容器へ。' },
+        { k: '3', h: '常温で1日1回混ぜる', t: 'ふたは軽くのせる程度に。水が減って麹が出ていたら、少し足します。' },
+        { k: '4', h: '約1〜2週間で完成', t: '夏は約1週間、冬は約10日〜2週間。麹がやわらかくなり、とろみと甘い香りが出たら完成。冷蔵庫で保存し、約3〜6ヶ月を目安に使いきりましょう。', w: '塩分があるので、使うときは塩のかわりに。塩麹を足すぶん、塩は減らしてね' } ] },
+      { h: '基本の醤油麹', p: '材料：米麹（乾燥）200g、醤油250〜300ml（麹がひたひたにかぶる量）', items: [
+        { k: '1', h: '麹をほぐして醤油を注ぐ', t: '清潔な保存容器に、ほぐした麹を入れ、ひたひたになるまで醤油を注いで混ぜます。' },
+        { k: '2', h: '翌日、醤油を足す', t: '麹が醤油を吸うので、翌日もう一度ひたひたになるまで足します。' },
+        { k: '3', h: '常温で1日1回混ぜる', t: '約1〜2週間、麹の芯がなくなり、とろっとしたら完成。冷蔵庫で約3ヶ月を目安に。' } ] },
+      { h: '基本の麹甘酒（炊飯器）', p: '材料：米麹（乾燥）200g、炊いたごはん150g、水300ml', items: [
+        { k: '1', h: 'ごはんと水を合わせる', t: '炊飯器の内釜に、ごはんと水を入れて混ぜ、60℃くらいに冷まします（指を入れて少し熱いくらい）。' },
+        { k: '2', h: '麹を混ぜる', t: 'ほぐした米麹を加えて、よく混ぜます。' },
+        { k: '3', h: '保温で8〜10時間', t: 'ふたを開けたまま、ぬれぶきんをかけて保温モードに。2〜3時間おきに混ぜます。', w: '70℃以上になると麹のはたらきが止まってしまうので、ふたは閉めない' },
+        { k: '4', h: '甘くなったら完成', t: 'しっかり甘みが出たら完成。粗熱をとって冷蔵庫で約1週間、冷凍なら約1ヶ月。', w: 'やさしい甘さでも糖質はしっかり。1日コップ1杯くらいまでを目安に' } ] }
+    ],
+    note: '麹調味料は、つくっている時間もたのしい。毎日ちょっと混ぜて、変化を観察してみてね。乾燥麹と生麹で、水分の量が少し変わるのでご注意を🐰',
+    challenge: '今日の食事に、発酵食品を1つプラスしてみる' },
+  { id: 'snack', no: '09', icon: '🍠', en: 'SNACK TIME', title: '間食のすゝめ', graph: true,
+    lead: 'おやつや甘いものはダメ、ではありません。上手な間食は、血糖値を安定させてくれます。',
+    sections: [
+      { h: 'なぜ間食がおすすめ？', p: 'お腹がすきすぎてから一気に食べると、血糖値が急に上がって、急に下がります。下がったときに、またイライラしたり、甘いものが欲しくなったり。間にちょこっと食べておくと、血糖値の波がゆるやかになります。', items: [
+        { k: '!', h: 'お腹がすきすぎて、つい買いすぎる人は', t: 'コンビニやスーパーで、いらないものまで買ってしまう…という人は、血糖バランスが乱れているのかも。', w: '空腹のままの買い物は、甘いもの・揚げ物に手がのびやすい' },
+        { k: '鞄', h: 'カバンに入れておく', t: '無駄なものを買う前に、おやつを事前にカバンに入れておくのがおすすめです。' } ] },
+      { h: 'おすすめのおやつ', items: [
+        { k: '芋', h: '焼き芋・干し芋', t: '自然な甘さで、腹もちも◎。' },
+        { k: '実', h: '素焼きナッツ', t: '塩・油不使用のものを、ひとつかみ。' },
+        { k: '果', h: '果物・ドライフルーツ', t: 'ドライフルーツは砂糖・油不使用のものを。' },
+        { k: '米', h: 'おにぎり・甘酒', t: '小腹がすいたら、おにぎりもりっぱな間食です。' },
+        { k: '魚', h: '小魚', t: 'カルシウム補給にも。' } ] },
+      { h: '楽しみ方のコツ', items: [
+        { k: '時', h: '時間を決める', t: 'だらだら食べより、15時ごろなど「おやつの時間」をつくる。' },
+        { k: '器', h: 'お皿に出して食べる', t: '袋から直接より、量がわかって満足感もアップ。' },
+        { k: '◎', h: '罪悪感をもたない', t: '食べると決めたら、味わって楽しもう。' } ] }
+    ],
+    links: [
+      { icon: '🍫', label: 'エナジーバー', sub: 'うさしほのおすすめ。カバンや車に常備しています', href: 'https://usashiho.shop/?mode=cate&cbid=2952508&csid=9&sort=n' },
+      { icon: '🥗', label: 'THIS IS SALAD', sub: '“野菜を補う”新感覚おやつ', href: 'https://usashiho.shop/?mode=cate&cbid=2952508&csid=6&sort=n' } ],
+    linksTitle: 'うさしほのおすすめおやつ',
+    note: '血糖値が下がった状態でコンビニやスーパーに行くと、お腹がすきすぎて「とにかく何か食べたい！」となり、いらないものまで買ってしまう…。そしてその反動で一気に食べて、後悔や罪悪感に。あなたもそんな経験、ありませんか？最初は「ちょっと高いな」と思うかもしれないけれど、質のいいおやつを事前に準備しておくほうが、トータルで考えるとコスパが案外いいんです。わたしのショップでも販売しているので、よかったらこれを機にチェックしてみてね。',
+    challenge: '明日のおやつを、カバンに入れて出かけてみる' },
+  { id: 'staple', no: '04', icon: '🍚', en: 'STAPLE FOOD', title: '主食について',
+    lead: '玄米や雑穀米はおすすめ。でも、無理に玄米にしなくて大丈夫です。',
+    sections: [
+      { h: 'ごはんの選び方', items: [
+        { k: '玄', h: '玄米', t: '栄養はたっぷり。ただし、よく噛まないと消化不良になりやすく、合わない人も現代人には多いです。' },
+        { k: '分', h: '分づき米', t: '3分・5分・7分づきなど。玄米で重たく感じたら、まずはここから。' },
+        { k: '白', h: '白米', t: '消化力が弱めの方や、玄米・分づき米が重たく感じる方は、白米でもOK。' } ] },
+      { h: '雑穀は、どのお米に入れてもOK', p: '玄米にも、分づき米にも、白米にも。いつものお米に雑穀を混ぜるだけで、栄養がぐんとアップします。', items: [] },
+      { h: 'おすすめの雑穀', items: [
+        { k: '★', h: 'アマランサス', t: '小さな粒で、プチプチ食感。カルシウムや鉄、食物繊維が豊富な雑穀です。いつものお米に大さじ1から混ぜてみて。' } ] }
+    ],
+    note: 'まずは、しっかり噛んで食べてみて。それで「ちょっと重たいな」と感じたら、分づき米や白米に。どのお米にも、雑穀を混ぜてOK。カラダの声が答えです。日本では昔から、ひえ・あわ・きびなどの雑穀をお米と一緒に食べるのが当たり前でした。今ではその習慣がすっかり少なくなってしまったけれど、日本の伝統である雑穀を取り入れて、カラダにスタミナをつけていきましょう🌾',
+    challenge: 'いつものお米に雑穀（アマランサス）を混ぜて炊いてみる' },
+  { id: 'chew', no: '05', icon: '😋', en: 'CHEW WELL', title: 'とにかく噛もう！',
+    lead: 'いちばんお金がかからない、いちばん効く習慣。それが「噛むこと」です。',
+    sections: [
+      { h: '噛むといいこと', items: [
+        { k: '1', h: '消化を助ける', t: '唾液には消化酵素が含まれています。よく噛むほど、胃腸の負担が軽くなります。' },
+        { k: '2', h: '幸せホルモン「セロトニン」のきっかけに', t: '一定のリズムで噛むことはリズム運動のひとつ。セロトニン神経を活性化させると言われていて、気分の安定やリラックスにつながります。' },
+        { k: '3', h: '食欲をおさえるホルモンも', t: 'よく噛むと、脳の満腹中枢にはたらく「神経ヒスタミン」や、腸から出る満腹ホルモン「GLP-1」が出やすくなると報告されています。' },
+        { k: '4', h: 'だからダイエットにも', t: '満腹を感じやすくなり、少ない量でも満足しやすくなります。早食いは食べすぎのもとです。' },
+        { k: '5', h: '味がよくわかる', t: '素材の甘みに気づくと、濃い味つけがいらなくなってきます。' } ] },
+      { h: '噛むコツ', items: [
+        { k: '目', h: '目安は「ドロドロになるまで」', t: '「ひと口30回」はよく聞くけれど、食べ物によっては足りないことも。形がなくなって、ドロドロになるまで噛むのを目安に。' },
+        { k: '口', h: 'ひと口を小さく', t: '口に入れる量が少ないほど、しっかり噛めます。' },
+        { k: '箸', h: 'ひと口ごとに箸を置く', t: '次のひと口を準備しないだけで、噛む回数は自然に増えます。' },
+        { k: '📱', h: '「ながら食べ」をやめる', t: 'スマホやタブレットを見ながら食べていませんか？画面を閉じて、噛むことに集中してみよう。' } ] }
+    ],
+    note: '玄米が合うかどうかも、まずは噛んでから。噛むことは、すべての章の土台です。',
+    challenge: 'ひと口、100回噛んでみる。意外と100回噛んでも、まだ形が残っていたりします' },
+  { id: 'timing', no: '06', icon: '⏰', en: 'MEAL TIMING', title: '食べる時間', clock: true,
+    lead: 'カラダには、1日の中で得意な仕事があるという考え方があります。',
+    sections: [
+      { h: 'でも、ひとつの正解ではありません', items: [
+        { k: '🍳', h: '朝からたんぱく質をしっかり、もおすすめ', t: '栄養素を効率よくとるなら、朝から卵・納豆・豆腐の味噌汁・焼き魚などのたんぱく質をしっかり食べるほうがいい場合もあります。' },
+        { k: '⚡', h: '朝に元気が出ない人は、食べよう', t: '朝からだるい、力が出ないという人は、ドリンクだけで済ませずに、しっかり食べてみてください。' },
+        { k: '⌛', h: '空腹時間がすべてではない', t: '少しずつこまめに食べる「頻回食」が合う人もいます。' } ] },
+      { h: '夜の食べ方のポイント', items: [
+        { k: '🌙', h: '寝る2〜3時間前までに食べ終える', t: '寝る直前の食事は、眠っている間も胃腸がはたらき続けることに。夕食はなるべく早めに終えよう。' },
+        { k: '🥤', h: '夜をドリンクに置き換えるのもおすすめ', t: '帰りが遅くなる日や、夕食が遅くなりそうな日は、夜をドリンクに置き換えるのも◎。' },
+        { k: '💧', h: '早めに食べ終えたら、ドリンクをちびちび', t: '夕食を早く食べ終える人は、夕食のあとにドリンクを少しずつ補うのもとてもおすすめです。空腹で眠れない…を防ぎます。' },
+        { k: '◎', h: 'この期間は「血糖値の安定」を意識して', t: '空腹すぎる時間や、食べすぎる時間をつくらない。ドリンクや間食を上手に使って、血糖値の波をゆるやかに過ごしてみよう。' } ] },
+      { h: '頻回食が合うのは、こんな人', items: [
+        { k: '✓', h: 'お腹がすくと、イライラ・手のふるえ・頭痛が出る', t: '血糖値が下がりやすいタイプかもしれません。' },
+        { k: '✓', h: '一度にたくさん食べられない', t: '胃が小さい、食が細い人は、回数を分けたほうがラク。' },
+        { k: '✓', h: '食事を抜くと、ふらつく・集中できない', t: '空腹時間をつくるより、こまめに補うほうが調子が安定します。' },
+        { k: '✓', h: 'やせ型で、体重を落としたくない', t: '1日3食＋間食で、しっかり量を確保しよう。' } ] }
+    ],
+    note: '朝を軽くする選択も、朝しっかり食べる選択も、どちらもアリ。7日間で、いつもとあえて違うパターンを試して、日中の体調や集中力を観察してね。',
+    challenge: 'いつもと違う朝ごはんのパターンを1日試してみる' },
+  { id: 'water', no: '07', icon: '💧', en: 'WATER', title: '毎日の水分摂取',
+    lead: 'カラダの約6割は水分。巡りを整える、いちばん身近な方法です。',
+    sections: [
+      { h: '水分のとり方', items: [
+        { k: '量', h: '目安は1日1.5〜2L', t: '体重×30mlくらいが目安。食事に含まれる水分もあるので、無理に飲みすぎなくてOK。' },
+        { k: '朝', h: '起きたらコップ1杯', t: '白湯や常温の水で、カラダをやさしく起こします。' },
+        { k: '温', h: '白湯は「少しぬるい」くらいに', t: '熱すぎるお湯は、のどや胃に負担がかかることも。ふーふーせずに飲めるくらい（50〜60℃）のぬるめの白湯がおすすめです。' },
+        { k: '回', h: 'ちょこちょこ飲む', t: '一気に飲むより、少しずつこまめに。' },
+        { k: '夜', h: '寝る直前は飲みすぎない', t: '夜中にトイレで目が覚めると、眠りが浅くなります。寝る1〜2時間前までに、こまめにとっておこう。' } ] },
+      { h: 'ノンカフェインのお茶リスト', p: '水分補給の主役は、水・白湯・ノンカフェインのお茶です。', items: [
+        { k: '麦', h: '麦茶・はと麦茶', t: '香ばしくて、毎日のごくごく用に。' },
+        { k: '豆', h: '黒豆茶', t: 'ほんのり甘く、香ばしい。' },
+        { k: '根', h: 'ごぼう茶・たんぽぽ茶', t: '根っこのお茶。土っぽい香りでほっとします。' },
+        { k: '穀', h: 'とうもろこし茶・そば茶', t: '甘みがあって飲みやすい。そばアレルギーの方はご注意を。' },
+        { k: '葉', h: 'ルイボスティー・よもぎ茶', t: 'クセが少なく、冷やしても温めても。' },
+        { k: '花', h: 'カモミールティー', t: '寝る前のリラックスタイムに。' },
+        { k: '!', h: 'じつはカフェイン入り', t: '緑茶・ほうじ茶・玄米茶・ウーロン茶・紅茶・抹茶には、カフェインが入っています。' } ] }
+    ],
+    note: 'むくみやすい人、冷えやすい人は、量よりも「温度」と「タイミング」を意識してみて。',
+    challenge: '起きてすぐ、ぬるめの白湯をコップ1杯飲んでみる' },
+  { id: 'caffeine', no: '08', icon: '☕', en: 'CAFFEINE', title: 'カフェインについて',
+    lead: 'コーヒーやお茶そのものが悪いわけではありません。大切なのは「依存になっていないか」です。',
+    sections: [
+      { h: 'こんな人は要チェック', items: [
+        { k: '✓', h: '毎日飲まないと、やってられない', t: '1日1杯でも、ないと落ち着かないなら依存のサインかも。' },
+        { k: '✓', h: '飲むのが毎日の習慣になっている', t: '朝起きたら、仕事の前に…と決まっている人も。' },
+        { k: '✓', h: '午後になると、また欲しくなる', t: 'カフェインが切れて、だるさを感じていませんか？' } ] },
+      { h: 'カフェインのデメリット', items: [
+        { k: '依', h: '依存しやすい', t: 'カフェインには、アドレナリンなどのホルモンを出して、カラダを一時的にシャキッとさせるはたらきがあります。でもそれが続くと「カフェインがないと動けない」状態になりやすいのです。', w: 'やめたときの強い眠気・だるさ・頭痛＝カラダがカフェインに頼っていたサイン' },
+        { k: '眠', h: '眠りが浅くなる', t: '午後遅くにとると、夜の眠りに影響しやすくなります。' },
+        { k: '胃', h: '胃に負担がかかる', t: '空腹時のコーヒーは、胃が荒れる原因にも。' },
+        { k: '鉄', h: '鉄の吸収をじゃまする', t: '食事のすぐあとのコーヒーやお茶は、鉄の吸収を下げることがあります。' } ] },
+      { h: 'この7日間は、基本カフェインなしで', p: 'この7日間は、基本的にカフェインをとらない選択をしてみてください。1週間だけでもいちど止めてみると、自分がどれだけ頼っていたかがわかります。', items: [
+        { k: '◎', h: 'ノンカフェイン＝穀物コーヒーなど', t: '大麦・ライ麦・チコリ・たんぽぽの根など、コーヒー豆ではないものからつくられたものは、カフェインゼロ。「穀物コーヒー」「たんぽぽコーヒー」と呼ばれます。' },
+        { k: '!', h: 'デカフェ・カフェインレスは「ゼロ」ではない', t: 'カフェでもよく見かけますが、コーヒー豆からカフェインを取り除いたもの。少しは残っています。', w: 'デカフェ・カフェインレスにも、カフェインはわずかに残留' } ] }
+    ],
+    links: [{ label: 'ノンカフェインコーヒー', sub: 'うさしほショップでも販売中。穀物でつくられたカフェインゼロのコーヒー', href: 'https://usashiho.shop/?pid=188514346', icon: '☕' }], linksTitle: 'うさしほのおすすめノンカフェイン',
+    note: '何ごとも「依存」まで行くと、あまりいいことはありません。いきなりやめるのがつらい人は、量を半分にするところからでもOK。頭痛が強いときは無理をしないでね。',
+    challenge: '7日間、カフェインをお休みして、穀物コーヒーやノンカフェインのお茶に替えてみる' },
+  { id: 'label', no: '10', icon: '🛒', en: 'SHOPPING｜お買い物のポイント', title: 'これであなたも添加物マスター！',
+    lead: 'ちょっと中級者向けの章です。全部覚えなくて大丈夫。裏の「原材料」を見るクセがつくだけで、選ぶ力がぐんと上がります。',
+    sections: [
+      { h: '原材料の見方', items: [
+        { k: '順', h: '多く使われている順に書いてある', t: 'いちばん最初に書かれているものが、いちばん多く入っています。', w: '1番目・2番目に「砂糖」があるお菓子やスイーツは、血糖値が乱れやすいサイン' },
+        { k: '／', h: '「／」のあとは添加物', t: '原材料と添加物は「／」などで分けて書かれています。「／」のあとに、よくわからないものやカタカナ・数字が少ないものを選びましょう。' },
+        { k: '比', h: '同じ食材でも、商品によって全然ちがう', t: '同じハムやパンでも、「／」以降の数がまったく違うことも。見比べてみると、びっくりします。' },
+        { k: '3', h: '3大添加物食品', t: '加工肉（ハム・ソーセージ・ベーコン）、市販の漬物（キムチ含む）、練り物（かまぼこ等）。まずはここから「／」以降をチェックする習慣を。' },
+        { k: '無', h: '「無添加」は何が無添加？', t: '「◯◯無添加」と書いてあっても、ほかの添加物が入っていることもあります。' } ] },
+      { h: '「／」より前（原材料）でチェック', items: [
+        { k: '糖', h: '果糖ぶどう糖液糖・ぶどう糖果糖液糖', t: '飲み物やたれ、パン、アイスなどに。', w: '吸収が早く、血糖値が急上昇しやすい／とりすぎで肝臓に脂肪がたまる原因にも' },
+        { k: '脂', h: 'ショートニング・マーガリン・ファットスプレッド・植物油脂', t: 'お菓子、パン、揚げ物、カップ麺などに。', w: 'トランス脂肪酸を含むことがあり、悪玉コレステロール増加の原因に' },
+        { k: 'エ', h: '酵母エキス・たんぱく加水分解物・◯◯エキス', t: 'スナック、だし、スープの素などに。', w: '添加物表示には出ない、うま味を足すための原料／濃い味に舌が慣れやすい' } ] },
+      { h: '「／」より後（添加物）でチェック', items: [
+        { k: '味', h: '調味料（アミノ酸等）', t: 'うま味調味料。スナック、加工肉、お惣菜などに。', w: '強いうま味で、素材の味がわかりにくい' },
+        { k: '甘', h: '甘味料（アスパルテーム・L-フェニルアラニン化合物、アセスルファムK、スクラロース、ネオテーム など）', t: '「カロリーゼロ」「糖類ゼロ」の飲み物やお菓子に。', w: '甘さに慣れて、もっと甘いものが欲しくなりやすい／腸内環境への影響の報告も' },
+        { k: '色', h: '着色料（赤色102号・黄色4号・黄色5号・青色1号などのタール色素、カラメル色素）', t: 'お菓子、漬物、飲み物、たらこなどに。', w: '一部のタール色素は、子どもの落ち着きのなさとの関係を指摘／海外では注意表示が必要な国も' },
+        { k: '保', h: '保存料（ソルビン酸K、安息香酸Na など）', t: 'ハム・ソーセージ、練り物、ジャムなどに。', w: '菌の増殖をおさえる成分／腸内細菌への影響を心配する声も' },
+        { k: '発', h: '発色剤（亜硝酸Na）', t: 'ハム・ソーセージ・ベーコンなどに。', w: '肉の成分と反応して、発がん性が指摘される物質ができることも' },
+        { k: 'リ', h: 'リン酸塩（Na）・pH調整剤', t: '加工肉、練り物、インスタント麺などに。', w: 'とりすぎで、カルシウムなどミネラルの吸収をじゃまする可能性' } ] }
+    ],
+    note: '添加物をゼロにするのは、今の暮らしではなかなか難しいもの。ストイックになりすぎて、食べることが楽しくなくなったら本末転倒です。完璧を目指すと疲れちゃうから、「知っておく」「選べるときに、選べるほうを」くらいでちょうどいいよ。外食やおつきあいの日は、気にしすぎず楽しんでOK。普段あまり見ていなかった人は、これを機にスーパーでいろんな食材の「／」以降を見比べてみてね。',
+    challenge: 'スーパーで、同じ種類の食材を2つ手にとって「／」以降を見比べてみる' },
+  { id: 'end', no: '11', icon: '🌿', en: 'YOUR WAY', title: 'おわりに｜わたしの整え方を見つけよう',
+    lead: 'ここまで読んでくれてありがとう。最後に、いちばん大事なことをもう一度。',
+    sections: [
+      { h: '7日間で試してみてほしいこと', items: [
+        { k: '1', h: '気になったものを1つずつ', t: '一気に全部変えると、何が合ったのかわからなくなります。' },
+        { k: '2', h: 'カラダの声を観察する', t: '朝の目覚め、お腹の調子、肌、気分。小さな変化をメモしてみて。' },
+        { k: '3', h: '合わなかったら、やめていい', t: '「合わない」とわかったことも、自分を知る大切なヒントです。' } ] }
+    ],
+    note: 'このガイドは、あなたの正解を決めるものではありません。自分で試して、自分で選ぶ。それが「ヨハクをつくる7日間」でいちばん持ち帰ってほしいことです🐰',
+    challenge: '7日間で「合いそう」と思えたものを3つ書き出してみる' }
+];
+const CHANGES = ['普段食べすぎだったなーと気づく', '空腹も心地よく感じる', '日中眠くならない', '寝起きがいい', '便通がいい', '頭がスッキリ、集中力アップ', '時間にヨハクが生まれた', '食べることをより楽しめる', '体重が減った', 'ぽっこりお腹がすっきり', 'むくみがとれた', 'イライラが減った', 'お肌がキレイになった'];
+const WANTS = ['どんな自分になりたい？どんな自分でいたい？', '今感じている、ささいな不調やお悩みは？', 'その原因として思いつくことは？', 'この期間で「こうなる！」と宣言するなら？', 'そのためにできることは？', '半年後の自分はどうなっていたら最高？'];
+const DAYS = ['10/25', '10/26', '10/27', '10/28', '10/29', '10/30', '10/31'];
+const DOWS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+const PATS = [{ v: '朝ファス', icon: '🌅', bg: '#F6EFDF', fg: '#574B47' }, { v: '昼ファス', icon: '🌞', bg: '#E3E8DE', fg: '#2F4A3A' }, { v: '夜ファス', icon: '🌙', bg: '#B7C2AE', fg: '#2F4A3A' }, { v: '1日ファス', icon: '💧', bg: '#2F4A3A', fg: '#F3EADC' }, { v: 'ドリンクだけ', icon: '🥤', bg: '#F3EADC', fg: '#574B47' }, { v: 'ふだん通り', icon: '🍚', bg: '#EEF2EA', fg: '#574B47' }];
+CH.forEach((c, i) => { if (i >= 2) c.no = String(i - 1).padStart(2, '0'); });
+const TINTS = ['#F6EFDF', '#E3E8DE', '#F8ECEA', '#EEF2EA', '#F3EADC', '#D3DDCB'];
+const FITS = [{ v: 'good', icon: '😊', label: 'しっくりきた' }, { v: 'hmm', icon: '🤔', label: 'もう少し試す' }, { v: 'no', icon: '🙅', label: 'わたしには合わない' }];
+const LEVELS = [[0, 'LEVEL 1/5 🌰', 'まずは「はじめに」から読んでみてね。'], [1, 'LEVEL 2/5 🌱', 'いいスタート！気になる章から、ゆるっと進めよう。'], [4, 'LEVEL 3/5 🌿', 'いい感じ！試してみたものはあるかな？'], [8, 'LEVEL 4/5 🍀', 'あと少し！しっくりきたかも記録してみて。'], [14, 'LEVEL 5/5 🌳', 'ぜんぶ読めた！ここからが本番です🐰']];
+class Component extends DCLogic {
+  state = { view: -1, read: {}, tried: {}, fit: {}, chk: {}, openS: -1, chg: {}, plan: { name: '', goal: '', wants: ['', '', '', '', '', ''], days: [0, 1, 2, 3, 4, 5, 6].map(() => ({ plan: '', pat: '', memo: '' })) }, showCard: false };
+  componentDidMount() {
+    try { this.setState({ bc: JSON.parse(localStorage.getItem(BC_KEY) || '{}'), rp: JSON.parse(localStorage.getItem(RP_KEY) || 'null') || undefined }); } catch (e) {}
+    try { const s = JSON.parse(localStorage.getItem(KEY) || '{}'); this.setState({ read: s.read || {}, tried: s.tried || {}, fit: s.fit || {}, chk: s.chk || {}, chg: s.chg || {}, plan: s.plan || this.state.plan }); } catch (e) {}
+  }
+  save(patch) { this.setState(patch, () => { try { const { read, tried, fit, chk, chg, plan } = this.state; localStorage.setItem(KEY, JSON.stringify({ read, tried, fit, chk, chg, plan })); } catch (e) {} }); }
+  go(i) { this.setState({ view: i }); window.scrollTo({ top: 0 }); }
+  rpSave(rp) { this.setState({ rp }); try { localStorage.setItem(RP_KEY, JSON.stringify(rp)); } catch (e) {} }
+  rpVals() {
+    const rp = this.state.rp || { mode: '', day: 1, a: {} }; const a = rp.a || {}; const lv = { easy: 0, normal: 1, full: 2 }[rp.mode] ?? -1;
+    const st = this.state.rpStep ?? -1;
+    const set = (k, v) => this.rpSave({ ...rp, a: { ...a, [k]: v } });
+    const pname = (this.state.plan && this.state.plan.name) || '';
+    const fs = RP_F.filter(f => f.m <= lv && f.k !== 'name');
+    const meal = ['breakfast', 'lunch', 'dinner', 'snack'];
+    const steps = [{ id: 'start' }];
+    fs.forEach(f => { if (meal.includes(f.k)) { if (!steps.find(s => s.id === 'meal')) steps.push({ id: 'meal', fs: fs.filter(x => meal.includes(x.k)) }); } else steps.push({ id: f.k, f }); });
+    const N = steps.length; const go = i => { this.setState({ rpStep: i }); window.scrollTo({ top: 0 }); };
+    const next = () => go(st + 1);
+    const split = o => { const m = o.match(/^(\S+)\s(.+)$/); return m && !/^[ぁ-んァ-ヶ一-龠A-Za-z]/.test(m[1]) ? [m[1], m[2]] : ['', o]; };
+    let q = null;
+    if (st >= 0 && st < N) {
+      const s = steps[st]; const base = { no: st + 1, n: N, pct: Math.round((st + 1) / N * 100) + '%', back: () => go(st - 1), next, isStart: false, isPick: false, isText: false, isMeal: false, multi: false, optional: false };
+      if (s.id === 'start') q = { ...base, isStart: true, title: '今日は何日目？📅', nameVal: a.name ?? pname, setName: e => set('name', e.target.value),
+        days: [1, 2, 3, 4, 5, 6, 7].map(d => ({ d, bg: rp.day === d ? '#2F4A3A' : '#FBFCF9', fg: rp.day === d ? '#F3EADC' : '#2F4A3A', pick: () => this.rpSave({ ...rp, day: d }) })) };
+      else if (s.id === 'meal') q = { ...base, isMeal: true, optional: true, title: '今日の食事🍽️', sub: '書ける日だけでOK（任意）', inputs: s.fs.map(f => ({ label: f.label.replace('（任意）', '').replace('は？', ''), ph: f.ph, val: a[f.k] || '', input: e => set(f.k, e.target.value) })) };
+      else {
+        const f = s.f; const multi = f.kind === 'multi';
+        if (f.kind === 'text') q = { ...base, isText: true, optional: true, title: f.label.replace(/（.*）/, ''), sub: (f.label.match(/（(.*)）/) || [])[1] || '', ph: f.ph, val: a[f.k] || '', input: e => set(f.k, e.target.value) };
+        else q = { ...base, isPick: true, multi, title: f.label.replace(/（.*）/, ''), sub: multi ? 'いくつでも選んでね' : ((f.label.match(/（(.*)）/) || [])[1] || ''),
+          opts: f.o.map(o => { const on = multi ? (a[f.k] || []).includes(o) : a[f.k] === o; const [em, tx] = split(o); return { em, tx, hasEm: !!em, bg: on ? '#2F4A3A' : '#FBFCF9', fg: on ? '#F3EADC' : '#574B47', ring: on ? '0 6px 14px rgba(47,74,58,.25)' : '0 0 0 1px #D3DDCB inset', tf: on ? 'scale(1.03)' : 'none',
+            pick: () => { if (multi) { const cur = a[f.k] || []; set(f.k, on ? cur.filter(x => x !== o) : [...cur, o]); } else { set(f.k, on ? '' : o); if (!on) { clearTimeout(this.rpAT); this.rpAT = setTimeout(() => go(st + 1), 260); } } } }; }) };
+      }
+      q.isLast = st === N - 1; q.nextLabel = q.isLast ? '完了 ✨' : (q.optional && !q.val && !(q.inputs || []).some(i => i.val) ? 'スキップ →' : '次へ →'); q.showNext = !q.isPick || q.multi; q.canBack = st > 0;
+    }
+    const name = a.name ?? pname;
+    const lines = ['【ヨハクをつくる7日間】DAY' + rp.day + ' レポート🐰'];
+    if (name) lines.push('ニックネーム：' + name);
+    fs.forEach(f => { const v = a[f.k]; const s = Array.isArray(v) ? v.join('・') : v; if (!s) return; if (f.kind === 'text' && !f.short) lines.push('', f.r, s); else lines.push(f.r + '：' + s); });
+    const text = lines.join('\n');
+    const cheers = ['今日も記録できてえらい🌿', 'マイペースでいいんだよ🌿', '自分の声を聴けた。それが一番大切🕯️', '続けることが一番大事✨', '小さな気づきが、明日のヨハクに🐰'];
+    return { modes: RP_MODES.map(m => ({ ...m, pick: () => { this.rpSave({ ...rp, mode: m.v }); go(0); } })),
+      isMode: lv < 0 || st < 0, isQ: lv >= 0 && st >= 0 && st < N, isDone: lv >= 0 && st >= N, q, text, cheer: cheers[(rp.day - 1) % cheers.length],
+      copyLabel: this.state.rpCopied ? '✓ コピーしました！' : '📋 レポートをコピーする',
+      copy: () => { try { navigator.clipboard.writeText(text); } catch (e) {} this.setState({ rpCopied: true }); clearTimeout(this.rpT); this.rpT = setTimeout(() => this.setState({ rpCopied: false }), 2000); },
+      edit: () => go(0), toModes: () => go(-1), home: () => { this.setState({ rpStep: -1 }); this.go(-1); }, reset: () => { this.rpSave({ mode: rp.mode, day: rp.day, a: { name: a.name } }); go(0); },
+      open: () => { this.setState({ rpStep: -1 }); this.go(-4); } };
+  }
+  bcSave(bc) { this.setState({ bc }); try { localStorage.setItem(BC_KEY, JSON.stringify(bc)); } catch (e) {} }
+  bcCalc(ans) { const cat = [0, 0, 0, 0, 0]; ans.forEach((s, i) => { cat[BCQ[i].c] += s; }); const tot = cat.reduce((a, b) => a + b, 0); return { cat, tot, lv: BCLV.find(l => tot / BCTOTAL * 100 >= l[0]) }; }
+  bcVals() {
+    const bc = this.state.bc || {}; const cq = this.state.cq;
+    const fmt = d => { const t = new Date(d); return (t.getMonth() + 1) + '/' + t.getDate(); };
+    const B = bc.before && this.bcCalc(bc.before.ans), A = bc.after && this.bcCalc(bc.after.ans);
+    const start = r => () => { this.setState({ cq: { r, i: 0, ans: [] } }); window.scrollTo({ top: 0 }); };
+    const card = (r, x, label, when) => ({ label, when, done: !!x, notDone: !x, score: x ? x.tot : 0, lvName: x ? x.lv[2] : '', lvIcon: x ? x.lv[1] : '', date: x ? fmt(bc[r].d) + ' 回答' : '', btn: x ? 'もう一度チェック' : 'チェックする', start: start(r), bg: r === 'after' ? '#E3E8DE' : '#F6EFDF' });
+    let q = null;
+    if (cq) {
+      const it = BCQ[cq.i];
+      q = { round: cq.r === 'before' ? 'BEFORE' : 'AFTER', no: cq.i + 1, n: BCQ.length, cat: BCC[it.c].icon + ' ' + BCC[it.c].name, q: it.q, pct: Math.round(cq.i / BCQ.length * 100) + '%', canBack: cq.i > 0,
+        back: () => this.setState({ cq: { ...cq, i: cq.i - 1, ans: cq.ans.slice(0, -1) } }), quit: () => this.setState({ cq: null }),
+        opts: it.o.map(o => ({ t: o[0], pick: () => { const ans = [...cq.ans, o[1]]; if (ans.length >= BCQ.length) { this.bcSave({ ...bc, [cq.r]: { ans, d: Date.now() } }); this.setState({ cq: null }); window.scrollTo({ top: 0 }); } else this.setState({ cq: { ...cq, i: cq.i + 1, ans } }); } })) };
+    }
+    const one = A || B;
+    const bars = BCC.map((c, i) => ({ label: c.icon + ' ' + c.name, max: BCMAX[i], b: B ? B.cat[i] : 0, a: A ? A.cat[i] : 0, bw: (B ? B.cat[i] / BCMAX[i] * 100 : 0) + '%', aw: (A ? A.cat[i] / BCMAX[i] * 100 : 0) + '%', diff: B && A ? (A.cat[i] - B.cat[i] > 0 ? '+' + (A.cat[i] - B.cat[i]) : String(A.cat[i] - B.cat[i])) : '' }));
+    const d = B && A ? A.tot - B.tot : 0;
+    return { bcQuiz: !!cq, bcIdle: !cq, q, total: BCTOTAL, cards: [card('before', B, 'BEFORE', 'スタート前〜DAY1の朝'), card('after', A, 'AFTER', 'DAY7（最終日）')],
+      hasAny: !!one, hasBoth: !!(B && A), onlyBefore: !!(B && !A), bars, showA: !!A, showB: !!B,
+      diffTxt: d > 0 ? '+' + d + '点 UP！' : d < 0 ? d + '点' : '±0点', diffMsg: d > 0 ? '7日間で、カラダの声が変わってきたね🐰' : 'スコアは数字のひとつ。気づけたことが、いちばんの変化です🐰',
+      oneIcon: one ? one.lv[1] : '', oneName: one ? one.lv[2] : '', oneMsg: one ? one.lv[3] : '', oneScore: one ? one.tot : 0,
+      badge: B && A ? 'ビフォーアフター完了' : B ? 'BEFORE 済み' : 'まだ', open: () => this.go(-3) };
+  }
+  renderVals() {
+    const { view, read, tried, fit, chk, openS, chg, plan, showCard } = this.state;
+    const sScore = SEASON.filter(s => chk[s.key]).length;
+    const total = CH.length;
+    const readCount = CH.filter(c => read[c.id]).length;
+    const triedCount = CH.filter(c => tried[c.id]).length;
+    const pct = readCount / total;
+    const lv = readCount === total ? LEVELS[LEVELS.length - 1] : LEVELS.slice(0, -1).filter(l => readCount >= l[0]).pop();
+    const nxt = readCount === total ? null : LEVELS.find(l => l[0] > readCount && l !== LEVELS[LEVELS.length - 1]) || LEVELS[LEVELS.length - 1];
+    const nextTxt = nxt ? '次のレベルまで、あと' + ((nxt === LEVELS[LEVELS.length - 1] ? total : nxt[0]) - readCount) + '章' : '全' + total + '章コンプリート🎉';
+    const fitLabel = id => (FITS.find(f => f.v === fit[id]) || {}).label;
+    const cards = CH.slice(2).map((c, k) => {
+      const i = k + 2, r = !!read[c.id];
+      return { no: c.no, icon: c.icon, en: c.en, title: c.title, read: r, hasFit: !!fit[c.id], fitLabel: fitLabel(c.id) || '',
+        badge: r ? '既読' : (tried[c.id] ? 'やってみた' : '未読'), badgeBg: r ? '#F3EADC' : '#FBFCF9', badgeFg: '#2F4A3A',
+        score: c.season ? (SEASON.filter(s => chk[s.key]).length + '/' + SEASON.length + '点') : '', hasScore: !!c.season, bg: r ? '#D3DDCB' : TINTS[k % TINTS.length], fg: '#574B47', enC: '#2F4A3A', icBg: '#FBFCF9', ring: 'none', delay: (k * 0.04) + 's', open: () => this.go(i) };
+    });
+    const inChapter = view >= 0;
+    const c = inChapter ? CH[view] : CH[0];
+    const col = c.column;
+    const cur = { ...c, isChanges: !!c.changesList, hasNote: !!c.note, hasSeason: !!c.season, hasColumn: !!col, isClock: !!c.clock, isGraph: !!c.graph, hasLinks: !!(c.links && c.links.length), links: c.links || [],
+      column: col ? { title: col.title, lead: col.lead, where: col.where, memo: col.memo, items: col.items.map(([n, s]) => ({ n, s })), why: col.why.map(([k, h, t]) => ({ k, h, t })) } : { items: [], why: [] }, hasChallenge: !!c.challenge,
+      sections: c.sections.map((s, si) => { const L = (c.id === 'yurufas' && LK[YF_LOOK[si]]) || {}; const fg = L.fg || '#574B47'; return { h: s.h, p: s.p || '', hasP: !!s.p, bg: L.bg || '#FBFCF9', ring: L.ring || 'none', rot: L.rot || 'none', fg, hc: L.fg || '#2F4A3A', hasTape: !!L.tape, tape: L.tape || '', hasIll: !!L.ill, ill: L.ill || '', mk: L.mk || 'transparent', pfs: L.pBig ? '15px' : '13px', pfw: L.pBig ? '700' : '400', cols: L.cols || '1fr', igap: L.card ? '8px' : '0', ibg: L.card || 'transparent', ipad: L.card ? '10px' : '10px 0', irad: L.card ? '14px' : '0', ibor: L.card ? 'none' : '1px dashed ' + (L.fg ? 'rgba(243,234,220,.25)' : '#E3E8DE'), icols: L.stack ? '1fr' : 'auto minmax(0,1fr)', kSize: L.big ? '40px' : '30px', kFs: L.big ? '20px' : '14px', items: s.items.map(it => {
+        const sym = /^[0-9!◎○△★♡🌞⌛⇄／✓①②③]$/.test(it.k);
+        return { ...it, hasW: !!it.w, w: it.w || '', kBg: L.fg ? '#F3EADC' : (sym ? '#2F4A3A' : '#E3E8DE'), kFg: L.fg ? '#2F4A3A' : (sym ? '#F3EADC' : '#2F4A3A') };
+      }) }; }) };
+    const isRead = !!read[c.id], isTried = !!tried[c.id];
+    return {
+      total, readCount, triedCount, pctNum: Math.round(pct * 100), pctStr: Math.round(pct * 100) + '%', ringOffset: (276.5 * (1 - pct)).toFixed(1),
+      levelName: lv[1], levelMsg: lv[2], nextTxt, allDone: readCount === total, showReset: this.props.showReset ?? false,
+      greet: plan.name ? plan.name + 'さん、おかえりなさい🐰 今日もゆるっといこう。' : '読んで、試して、わたしに合う整え方を見つけよう🐰',
+      isHome: view === -1, inChapter, isPlan: view === -2, isCheck: view === -3, bc: this.bcVals(), isReport: view === -4, rp: this.rpVals(), showBack: view !== -1, openYF: () => this.go(1), openPlan: () => this.go(-2), yfBadge: read.yurufas ? '既読' : 'まずはこれ', yfBadgeBg: read.yurufas ? '#D3DDCB' : '#E8C4C0',
+      changes: CHANGES.map((t, i) => { const on = !!chg[i]; return { t, on, bg: on ? '#2F4A3A' : '#FBFCF9', fg: on ? '#F3EADC' : '#574B47', mark: on ? '✓' : '○', toggle: () => this.save({ chg: { ...chg, [i]: !on } }) }; }), chgCount: Object.values(chg).filter(Boolean).length, chgTotal: CHANGES.length,
+      pName: plan.name, pGoal: plan.goal, setName: e => this.save({ plan: { ...plan, name: e.target.value } }), setGoal: e => this.save({ plan: { ...plan, goal: e.target.value } }),
+      wants: WANTS.map((q, i) => ({ q, v: plan.wants[i] || '', set: e => { const w = [...plan.wants]; w[i] = e.target.value; this.save({ plan: { ...plan, wants: w } }); } })),
+      pdays: plan.days.map((d, i) => { const setD = patch => { const ds = plan.days.map((x, j) => j === i ? { ...x, ...patch } : x); this.save({ plan: { ...plan, days: ds } }); }; const pat = PATS.find(p => p.v === d.pat); return { label: DAYS[i], dow: DOWS[i], plan: d.plan, memo: d.memo, setPlan: e => setD({ plan: e.target.value }), setMemo: e => setD({ memo: e.target.value }), pats: PATS.map(p => { const on = d.pat === p.v; return { ...p, on, bgc: on ? p.bg : '#FBFCF9', fgc: on ? p.fg : '#574B47', bd: on ? p.bg : '#D3DDCB', pick: () => setD({ pat: on ? '' : p.v }) }; }), patLabel: pat ? pat.v : '未定', patBg: pat ? pat.bg : '#F2F6EF', patFg: pat ? pat.fg : '#6E615C', planShow: d.plan || '—', memoShow: d.memo, hasMemo: !!d.memo }; }),
+      cardName: plan.name || 'わたし', cardGoal: plan.goal || '（目標を入力してね）', cardWants: (plan.wants || []).filter(w => w && w.trim()).map(w => ({ w })), hasWants: (plan.wants || []).some(w => w && w.trim()), showCard, openCard: () => { this.setState({ showCard: true }); setTimeout(() => { const el = document.getElementById('share-card'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' }); }, 60); }, closeCard: () => this.setState({ showCard: false }), cards, cur,
+      introBadge: read.intro ? '既読' : 'まずはここ', introBadgeBg: read.intro ? '#2F4A3A' : '#E8C4C0', introBadgeFg: read.intro ? '#F3EADC' : '#574B47',
+      openIntro: () => this.go(0), goHome: () => this.go(-1),
+      markRead: () => { if (!isRead) { this.save({ read: { ...read, [c.id]: true } }); } else if (view < total - 1) { this.go(view + 1); } else { this.go(-1); } },
+      readBtnLabel: isRead ? (view < total - 1 ? '既読 ✓　次の章へ →' : '既読 ✓　一覧にもどる') : '読んだ！🐰',
+      readBtnBg: isRead ? '#E3E8DE' : '#2F4A3A', readBtnFg: isRead ? '#2F4A3A' : '#F3EADC',
+      toggleTried: () => this.save({ tried: { ...tried, [c.id]: !isTried } }),
+      triedLabel: isTried ? '✓ やってみた！' : 'やってみた！にする', triedBg: isTried ? '#2F4A3A' : 'transparent', triedFg: isTried ? '#F3EADC' : '#2F4A3A',
+      fitOpts: FITS.map(f => { const on = fit[c.id] === f.v; return { ...f, bg: on ? '#2F4A3A' : '#FBFCF9', fg: on ? '#F3EADC' : '#574B47', pick: () => this.save({ fit: { ...fit, [c.id]: on ? undefined : f.v } }) }; }),
+      prevVis: view > 0 ? 'visible' : 'hidden', nextVis: inChapter && view < total - 1 ? 'visible' : 'hidden',
+      prevTitle: view > 0 ? SHORT(CH[view - 1].title) : '', nextTitle: inChapter && view < total - 1 ? SHORT(CH[view + 1].title) : '',
+      goPrev: () => view > 0 && this.go(view - 1), goNext: () => view < total - 1 && this.go(view + 1),
+      reset: () => this.save({ read: {}, tried: {}, fit: {}, chk: {}, chg: {} }),
+      sScore, sTotal: SEASON.length, sPct: Math.round(sScore / SEASON.length * 100) + '%', sMsg: sScore === SEASON.length ? 'ぜんぶクリア！すてきな台所です🐰' : (sScore >= 5 ? 'いい感じ！あと少し' : (sScore >= 1 ? 'まずはひとつから、で十分' : 'おうちの調味料、見てみよう')),
+      seasons: SEASON.map((s, i) => { const on = !!chk[s.key], op = openS === i; return { ...s, on, op, hasHow: !!s.how, how: (s.how || []).map(([m, h, t]) => ({ m, h, t, mBg: m === '◎' ? '#2F4A3A' : '#E8C4C0', mFg: m === '◎' ? '#F3EADC' : '#574B47' })), hasMemo: !!s.memo, memo: s.memo || '', arrow: op ? '−' : '＋', chkLabel: on ? '✓ わが家のは◎でした！' : 'わが家のも◎だったら押してね', chkBg: on ? '#2F4A3A' : 'transparent', chkFg: on ? '#F3EADC' : '#2F4A3A', rowBg: on ? '#E3E8DE' : '#FBFCF9', toggleOpen: () => this.setState({ openS: op ? -1 : i }), toggleChk: () => this.save({ chk: { ...chk, [s.key]: !on } }) }; }),
+    };
+  }
+}
+</script>
+</body>
+</html>
