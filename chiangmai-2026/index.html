@@ -102,17 +102,19 @@ strong{font-weight:700;color:var(--ink)}
 .mk.b{--marker:var(--marker3)}
 
 /* カバー：藍染めの夜空 */
-.hero{background:var(--indigo-deep);color:var(--on-indigo);--ill-ink:var(--on-indigo);
-  margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + 2.4rem)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1.5rem;align-items:end;padding-block:0 2rem}
-.hero .label{color:var(--saffron);padding-right:64px}
+/* 表紙：チェンマイの大きな木の写真。上と下に藍色をうっすら重ねて文字を読みやすく */
+.hero{position:relative;overflow:hidden;background:var(--indigo-deep);color:#F4ECDC;padding-top:2.4rem}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(18,26,48,.82) 0%,rgba(18,26,48,.5) 30%,rgba(18,26,48,0) 55%,rgba(18,26,48,0) 80%,rgba(18,26,48,.55) 100%)}
+.hero .wrap{position:relative;z-index:2;display:grid;align-content:start;min-height:clamp(560px,150vw,860px);padding-block:0 2rem}
+.hero .weave{position:relative;z-index:2}
+.hero .label{color:#F0B052;padding-right:64px}
 .hero .date{font-family:var(--f-label);letter-spacing:.2em;font-size:.95rem;font-variant-numeric:tabular-nums;border-bottom:1px solid currentColor;display:inline-block;padding-bottom:.15rem}
-.hero h1{font-size:clamp(2.2rem,8.5vw,3.4rem);letter-spacing:.08em;line-height:1.35}
-.hero .place{opacity:.85;font-size:.95rem}
-.hero-text{display:grid;gap:1.2rem;padding-bottom:.5rem}
-.hero .ill{width:min(230px,100%);aspect-ratio:200/220;justify-self:end}
-.hero .mk{--marker:rgba(232,160,48,.55)}
-@media (max-width:560px){.hero .wrap{grid-template-columns:1fr}.hero .ill{width:140px;margin-top:-1.2rem}}
+.hero h1{font-size:clamp(2.2rem,8.5vw,3.4rem);letter-spacing:.08em;line-height:1.35;text-shadow:0 2px 14px rgba(10,15,30,.45)}
+.hero .place{font-size:.95rem;text-shadow:0 1px 8px rgba(10,15,30,.6)}
+.hero-text{display:grid;gap:1.1rem}
+.hero .mk{--marker:rgba(232,160,48,.6)}
+@media (min-width:700px){.hero-photo{object-position:50% 82%}.hero .wrap{min-height:clamp(560px,62vw,760px)}}
 
 .toc{display:flex;flex-wrap:wrap;gap:8px;padding-block:1.4rem 0}
 .toc a{font-size:.82rem;text-decoration:none;color:var(--indigo);border:1px solid var(--indigo);border-radius:999px;padding:.25rem .9rem}
@@ -261,6 +263,7 @@ footer .label{color:var(--saffron)}
   <a href="#notes">おねがい</a>
 </nav>
 <header class="hero" id="top">
+  <img class="hero-photo" src="img/cover.jpg" width="933" height="1400" alt="チェンマイの大きな木の下で笑ううさしほ" fetchpriority="high">
   <div class="wrap">
     <div class="hero-text">
       <span class="label">Zubolove ・ Chiang Mai Retreat</span>
@@ -268,7 +271,6 @@ footer .label{color:var(--saffron)}
       <h1>自分を満たす<br><span class="mk">贅沢旅</span></h1>
       <p class="place">タイ・チェンマイ｜4泊6日 の しおり</p>
     </div>
-    <div class="ill" data-ill="lanterns" role="img" aria-label="夜空にのぼるコムローイ"></div>
   </div>
   <div class="weave"></div>
 </header>
