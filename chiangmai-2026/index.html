@@ -113,6 +113,8 @@ strong{font-weight:700;color:var(--ink)}
 .hero h1{font-size:clamp(2.2rem,8.5vw,3.4rem);letter-spacing:.08em;line-height:1.35;text-shadow:0 2px 14px rgba(10,15,30,.45)}
 .hero .place{font-size:.95rem;text-shadow:0 1px 8px rgba(10,15,30,.6)}
 .hero-text{display:grid;gap:1.1rem}
+.hero-logo{width:64px;height:auto;display:block;filter:drop-shadow(0 1px 6px rgba(10,15,30,.35))}
+.foot-logo{width:96px;height:auto;display:block}
 .hero .mk{--marker:rgba(232,160,48,.6)}
 @media (min-width:700px){.hero-photo{object-position:50% 82%}.hero .wrap{min-height:clamp(560px,62vw,760px)}}
 
@@ -266,6 +268,7 @@ footer .label{color:var(--saffron)}
   <img class="hero-photo" src="img/cover.jpg" width="933" height="1400" alt="チェンマイの大きな木の下で笑ううさしほ" fetchpriority="high">
   <div class="wrap">
     <div class="hero-text">
+      <img class="hero-logo" src="img/zubolove-logo.png" width="436" height="520" alt="ZUBOLOVE ずぼら部">
       <span class="label">Slow &amp; Abundant ・ Chiang Mai Retreat</span>
       <div><span class="date">2026.11.25 — 11.30</span></div>
       <h1>自分を満たす<br><span class="mk">贅沢旅</span></h1>
@@ -621,7 +624,7 @@ footer .label{color:var(--saffron)}
 
 <footer>
   <div class="weave"></div>
-  <div class="wrap"><span class="label">Zubolove ・ ずぼら部</span><span class="small" style="color:inherit;opacity:.75">Slow &amp; Abundant ・ Chiang Mai 2026</span></div>
+  <div class="wrap"><img class="foot-logo" src="img/zubolove-logo.png" width="436" height="520" alt="ZUBOLOVE ずぼら部"><span class="small" style="color:inherit;opacity:.75">Slow &amp; Abundant ・ Chiang Mai 2026</span></div>
 </footer>
 
 <script>
